@@ -1,0 +1,9 @@
+---
+---
+BEGIN:VCARD
+N:{{ site.last_name }};{{ site.first_name }};;;
+EMAIL;INTERNET:{{ site.email }}
+TEL;CELL:{{ site.tel }}
+TITLE:{{ site.profession }}
+URL:{{ site.url }}
+END:VCARD
