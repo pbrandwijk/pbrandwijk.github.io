@@ -1,0 +1,24 @@
+---
+layout: page
+title: Blog
+navigation_weight: 1
+narrow: false
+---
+<section class="container {% if page.narrow %}narrow{% endif %}">
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="link-list">
+    {% for post in site.posts %}
+      <li>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <span class="thumbnail icon-copyleft"></span>
+          <span class="details">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="title">{{ post.title }}</span>
+          <span class="desc">{{ post.excerpt | strip_html }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</section>

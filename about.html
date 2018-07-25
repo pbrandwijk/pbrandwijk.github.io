@@ -1,0 +1,42 @@
+---
+layout: page
+title: About me
+navigation_weight: 0
+narrow: true
+---
+<section class="container">
+  <h1>{{ page.title }}</h1>
+
+  <!-- Add some vertical space -->
+  <div class="form-group">
+    &nbsp;
+  </div>
+
+  <div id="bio">
+      <a href="{{ site.baseurl }}/"><span id="bio-image"></span></a>
+      <table>
+        <tbody>
+          <tr><th>bio</th><td>
+            I am a software engineer with an interest in formal verification and
+            software testing. I'm also interested in knowledge technology. In my
+            free time I like dancing and going outdoors.</td></tr>
+          <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
+          <tr><th>email</th><td>
+            {% include obfuscated-email-address.html %}
+          </td></tr>
+          <tr><th>pgp&nbsp;key</th><td>
+            <a href="{{ site.baseurl }}/pgp.html">{{ site.pgp_fingerprint | slice: 24, 32}}</a>
+          </td></tr>
+          <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
+          <tr><th>phone</th><td><a href="tel:{{ site.tel }}">{{ site.tel }}</a></td></tr>
+          <tr><th>sip</th><td><a href="sip:{{ site.sip }}">{{ site.sip }}</a></td></tr>
+          <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
+          <tr><th>linkedin</th><td><a href="{{ site.linkedin_url }}">{{ site.linkedin_url }}</a></td></tr>
+          <tr><th>github</th><td><a href="{{ site.github_url }}">{{ site.github_url }}</a></td></tr>
+          <tr><th>gitlab</th><td><a href="{{ site.gitlab_url }}">{{ site.gitlab_url }}</a></td></tr>
+        </tbody>
+      </table>
+  </div>
+
+  <p class="download-vcard">Import my contact data directly using this <a href="{{ "/assets/vCard.vcf" | prepend: site.baseurl }}">vCard</a>.</p>
+</section>

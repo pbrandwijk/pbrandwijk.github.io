@@ -1,0 +1,36 @@
+---
+layout: page
+title: "Experience"
+navigation_weight: 2
+---
+<h1 class="page-heading">Experience</h1>
+
+<p>You can download my CV in PDF format <a href="{{ site.baseurl }}/assets/resume/en/Pieter-Brandwijk.pdf">here</a>.</p>
+
+<h2>Work Experience</h2>
+
+<ul class="link-list">
+  {% assign projects = site.projects | reverse %}
+  {% for project in projects %}
+    <li>
+      <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">
+        <span class="thumbnail icon-project"></span>
+        {% if project.start-date and project.end-date %}
+        <span class="details">
+          <time datetime="{{ project.start-date }}">{{ project.start-date | date: "%b %Y" }}</time> -
+          <time datetime="{{ project.end-date }}">{{ project.end-date | date: "%b %Y" }}</time>
+        </span>
+        {% endif %}
+        <span class="title">{{ project.title }}</span>
+        <span class="desc">{{ project.excerpt | strip_html | truncatewords: 28 }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>Publications</h2>
+
+<ul class="link-list">
+  <li><a href="{{ "/assets/2012-08-13_Pieter_Brandwijk_Thesis_SE.pdf" | prepend: site.baseurl }}"><span class="thumbnail"></span><span class="details"></span><span class="title">Thesis</span><span class="desc">My master's thesis for the study Software Engineering.</span></a></li>
+  <li><a href="{{ "/assets/Van-metadata-naar-kennis.pdf" | prepend: site.baseurl }}"><span class="thumbnail"></span><span class="details"></span><span class="title">Van metadata naar kennis <i>(Dutch)</i></span><span class="desc">Article for an information professionals' magazine about the Topic Maps standard.</span></a></li>
+</ul>

@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Pieter Brandwijk - Software Quality Consultant"
+---
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Software Development Quality</h1>
+    <p>Helping your organization get the best out of your development process and keep control over your custom software.</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+  </div>
+</div>
+
+<section class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    {% for post in site.posts %}
+    {% if post.featured_article %}
+    <div class="col-md-4">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      <p><a class="btn btn-info" href="{{ post.url }}" role="button">View details &raquo;</a></p>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,42 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: "Pieter Brandwijk's blog"
+first_name: Pieter
+last_name: Brandwijk
+email: pieter@pbrandwijk.com
+pgp_fingerprint: "B8 7C 2D 27 91 28 11 DE FF 53 D7 3A 4C B4 07 5B 9F AD 44 A8"
+sip: p.brandwijk@sip.linphone.org
+tel: "+34 693 720 739"
+profession: "Software Engineer"
+description: > # this means to ignore newlines until "baseurl:"
+  Personal blog of Pieter Brandwijk.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.pbrandwijk.com" # the base hostname & protocol for your site
+
+# Social media handles
+github_username: "pbrandwijk"
+github_url: "https://github.com/pbrandwijk"
+gitlab_username: "pbrandwijk"
+gitlab_url: "https://gitlab.com/pbrandwijk"
+linkedin_url: "https://www.linkedin.com/in/pbrandwijk"
+skype_username: "pieter_1923"
+
+# Set the permalink style
+permalink: /:year/:month/:day/:title:output_ext
+
+# Build settings
+markdown: kramdown
+
+# Add the collection definition for projects and articles
+collections:
+  projects:
+    output: true
+
+# Use plugin to pretty print HTML output after Jekyll processing
+plugins: [jekyll-tidy]
