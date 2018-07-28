@@ -1,42 +1,79 @@
 ---
-layout: page
+layout: default
 title: About me
-navigation_weight: 0
-narrow: true
 ---
 <section class="container">
-  <h1>{{ page.title }}</h1>
+  <div class="row justify-content-center">
 
-  <!-- Add some vertical space -->
-  <div class="form-group">
-    &nbsp;
+    <div class="col-sm-10">
+      <h1>{{ page.title }}</h1>
+      <!-- Add some vertical space -->
+      <div class="form-group">
+        &nbsp;
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="card-img-top" src="{{ site.baseurl }}/images/Pieter-Brandwijk-226x305.jpg" alt="Card image">
+              <div class="card-body">
+                <p class="card-text">I am a software engineer with an interest in formal verification and
+                software testing. I'm also interested in knowledge technology. In my
+                free time I like dancing and going outdoors.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-8">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fa fa-address-card fa-3x contact-icon" title="Address card" aria-hidden="true"></i>
+                Import my contact data directly using this <a href="{{ "/assets/vCard.vcf" | prepend: site.baseurl }}">vCard</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fab fa-linkedin fa-3x contact-icon" title="LinkedIn" aria-hidden="true"></i>
+                <a href="{{ site.linkedin_url }}">{{ site.linkedin_url }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-envelope fa-3x contact-icon" title="Email" aria-hidden="true"></i>
+                {% include obfuscated-email-address.html %}
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-lock fa-3x contact-icon" title="PGP fingerprint" aria-hidden="true"></i>
+                <a href="{{ site.baseurl }}/pgp.html">{{ site.pgp_fingerprint | slice: 24, 32}}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-phone fa-3x contact-icon" title="Phone number" aria-hidden="true"></i>
+                <a href="tel:{{ site.tel }}">{{ site.tel }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fab fa-skype fa-3x contact-icon" title="Skype" aria-hidden="true"></i>
+                <a href="live:{{ site.skype_username }}">{{ site.skype_username }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="far fa-comments fa-3x contact-icon" title="SIP address" aria-hidden="true"></i>
+                <a href="sip:{{ site.sip }}">{{ site.sip }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fab fa-github fa-3x contact-icon" title="Github" aria-hidden="true"></i>
+                <a href="{{ site.github_url }}">{{ site.github_username }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fab fa-gitlab fa-3x contact-icon" title="Gitlab" aria-hidden="true"></i>
+                <a href="{{ site.gitlab_url }}">{{ site.gitlab_username }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fab fa-bitbucket fa-3x contact-icon" title="Bitbucket" aria-hidden="true"></i>
+                <a href="{{ site.bitbucket_url }}">{{ site.bitbucket_username }}</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </div>
-
-  <div id="bio">
-      <a href="{{ site.baseurl }}/"><span id="bio-image"></span></a>
-      <table>
-        <tbody>
-          <tr><th>bio</th><td>
-            I am a software engineer with an interest in formal verification and
-            software testing. I'm also interested in knowledge technology. In my
-            free time I like dancing and going outdoors.</td></tr>
-          <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
-          <tr><th>email</th><td>
-            {% include obfuscated-email-address.html %}
-          </td></tr>
-          <tr><th>pgp&nbsp;key</th><td>
-            <a href="{{ site.baseurl }}/pgp.html">{{ site.pgp_fingerprint | slice: 24, 32}}</a>
-          </td></tr>
-          <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
-          <tr><th>phone</th><td><a href="tel:{{ site.tel }}">{{ site.tel }}</a></td></tr>
-          <tr><th>sip</th><td><a href="sip:{{ site.sip }}">{{ site.sip }}</a></td></tr>
-          <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
-          <tr><th>linkedin</th><td><a href="{{ site.linkedin_url }}">{{ site.linkedin_url }}</a></td></tr>
-          <tr><th>github</th><td><a href="{{ site.github_url }}">{{ site.github_url }}</a></td></tr>
-          <tr><th>gitlab</th><td><a href="{{ site.gitlab_url }}">{{ site.gitlab_url }}</a></td></tr>
-        </tbody>
-      </table>
-  </div>
-
-  <p class="download-vcard">Import my contact data directly using this <a href="{{ "/assets/vCard.vcf" | prepend: site.baseurl }}">vCard</a>.</p>
 </section>
