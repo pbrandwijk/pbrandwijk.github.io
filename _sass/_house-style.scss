@@ -28,7 +28,13 @@ body {
   padding: 0 15px;
 }
 
-
+/* Vertically align icons that are bigger than the text in
+   an element to the vertical center */
+.contact-icon {
+  vertical-align: middle;
+  color: #9933CC;
+  min-width: 5rem;
+}
 
 
 
