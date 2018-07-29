@@ -1,10 +1,8 @@
 ---
 layout: page
 title: Blog
-navigation_weight: 1
-narrow: false
 ---
-<section class="container {% if page.narrow %}narrow{% endif %}">
+<section class="container">
   <h1 class="page-heading">Posts</h1>
 
   <ul class="link-list">
@@ -14,7 +12,7 @@ narrow: false
           <span class="thumbnail icon-copyleft"></span>
           <span class="details">{{ post.date | date: "%b %-d, %Y" }}</span>
           <span class="title">{{ post.title }}</span>
-          <span class="desc">{{ post.excerpt | strip_html }}</span>
+          <span class="desc">{{ post.excerpt | strip_html | truncatewords: 24 }}</span>
         </a>
       </li>
     {% endfor %}
