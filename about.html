@@ -1,6 +1,7 @@
 ---
 layout: default
-title: About me
+title: Contact
+navigation_weight: 4
 ---
 <section class="container">
   <div class="row justify-content-center">
@@ -37,6 +38,14 @@ title: About me
                 <a href="{{ site.linkedin_url }}">{{ site.linkedin_url }}</a>
               </li>
               <li class="list-group-item">
+                <i class="fab fa-skype fa-3x contact-icon" title="Skype" aria-hidden="true"></i>
+                <a href="skype:{{ site.skype_username }}?chat">{{ site.skype_username }}</a>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-phone fa-3x contact-icon" title="Phone number" aria-hidden="true"></i>
+                <a href="tel:{{ site.tel }}">{{ site.tel }}</a>
+              </li>
+              <li class="list-group-item">
                 <i class="fa fa-envelope fa-3x contact-icon" title="Email" aria-hidden="true"></i>
                 {% include obfuscated-email-address.html %}
               </li>
@@ -45,28 +54,8 @@ title: About me
                 <a href="{{ site.baseurl }}/pgp.html">{{ site.pgp_fingerprint | slice: 24, 32}}</a>
               </li>
               <li class="list-group-item">
-                <i class="fa fa-phone fa-3x contact-icon" title="Phone number" aria-hidden="true"></i>
-                <a href="tel:{{ site.tel }}">{{ site.tel }}</a>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-skype fa-3x contact-icon" title="Skype" aria-hidden="true"></i>
-                <a href="live:{{ site.skype_username }}">{{ site.skype_username }}</a>
-              </li>
-              <li class="list-group-item">
-                <i class="far fa-comments fa-3x contact-icon" title="SIP address" aria-hidden="true"></i>
-                <a href="sip:{{ site.sip }}">{{ site.sip }}</a>
-              </li>
-              <li class="list-group-item">
                 <i class="fab fa-github fa-3x contact-icon" title="GitHub" aria-hidden="true"></i>
                 <a href="{{ site.github_url }}">{{ site.github_username }}</a>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-gitlab fa-3x contact-icon" title="GitLab" aria-hidden="true"></i>
-                <a href="{{ site.gitlab_url }}">{{ site.gitlab_username }}</a>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-bitbucket fa-3x contact-icon" title="Bitbucket" aria-hidden="true"></i>
-                <a href="{{ site.bitbucket_url }}">{{ site.bitbucket_username }}</a>
               </li>
             </ul>
           </div>
