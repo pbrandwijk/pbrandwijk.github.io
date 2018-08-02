@@ -44,7 +44,7 @@ body {
 }
 
 .jumbotron{
-    background-image: url('/images/fancy-pants.jpg');
+    background-image: url('/images/pattern.jpg');
     color: #fff;
 }
 
@@ -146,9 +146,6 @@ body {
 }
 .link-list a:hover .thumbnail {
 	background-position: 0px 0px;
-}
-.link-list .thumbnail.icon-haskell {
-	background-image: url('/images/icon-haskell.png');
 }
 .link-list .thumbnail.icon-project {
 	background-image: url('/images/icon-project.png');
