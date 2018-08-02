@@ -89,7 +89,7 @@ body {
 	clear: both;
 	float: left;
 	margin-right: 15px;
-	background: url(/images/Pieter-Brandwijk-226x305.jpg);
+	background: url('/images/Pieter-Brandwijk-226x305.jpg');
 }
 
 
@@ -137,7 +137,7 @@ body {
 	height: 48px;
 	margin-left:  2px;
 	margin-right: 8px;
-	background-image: url(../images/icon-leaves.png);
+	background-image: url('/images/icon-leaves.png');
 	background-repeat: no-repeat;
 	background-position: 0px -48px;
 	border: 0;
@@ -147,46 +147,19 @@ body {
 .link-list a:hover .thumbnail {
 	background-position: 0px 0px;
 }
-.link-list .thumbnail.icon-zip {
-	background-image: url(icon-zip.png);
-}
-.link-list .thumbnail.icon-pdf {
-	background-image: url(icon-pdf.png);
-}
-.link-list .thumbnail.icon-web {
-	background-image: url(icon-web.png);
-}
-.link-list .thumbnail.icon-source {
-	background-image: url(icon-source.png);
-}
-.link-list .thumbnail.icon-ru {
-	background-image: url(icon-ru.png);
-}
-.link-list .thumbnail.icon-justitia {
-	background-image: url(icon-justitia.png);
-}
-.link-list .thumbnail.icon-mse {
-	background-image: url(icon-mse.png);
-}
 .link-list .thumbnail.icon-haskell {
-	background-image: url(../images/icon-haskell.png);
+	background-image: url('/images/icon-haskell.png');
 }
 .link-list .thumbnail.icon-project {
-	background-image: url(../images/icon-project.png);
+	background-image: url('/images/icon-project.png');
 }
 .link-list .thumbnail.icon-copyleft {
 	width: 48px;
-	background-image: url(../images/icon-copyleft.svg);
+	background-image: url('/images/icon-copyleft.svg');
 	background-size: cover;
   height: 0;
   padding: 0; /* reset */
   padding-bottom: 48px;
-}
-.link-list .thumbnail.icon-knight-in-n {
-	background-image: url(icon-knight-in-n.png);
-}
-.link-list .thumbnail.icon-np-puzzle {
-	background-image: url(icon-puzzle.png);
 }
 
 .link-list .title {
