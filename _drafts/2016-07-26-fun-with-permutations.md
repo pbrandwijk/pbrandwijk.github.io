@@ -2,7 +2,7 @@
 layout: post
 title:  "Fun with Permutations"
 date:   2016-07-26 20:15:00 +0200
-categories: haskell math
+tags:   haskell math
 ---
 *If I give you a set of four balls, one green, one red, one blue and one yellow, how many permutations can you make of this set? I will give you the answer right away, it's 24. But now, what if I asked you again how many orderings you can make with this set, but instead of picking four balls for each ordering, you can pick only three ([partial permutation](https://en.wikipedia.org/wiki/Partial_permutation)). The answer is again 24. If this surprises you, then this post is for you.*
 

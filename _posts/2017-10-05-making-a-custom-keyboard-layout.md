@@ -2,7 +2,7 @@
 layout: post
 title:  "Making a custom keyboard layout"
 date:   2017-10-05 12:00:00 +0200
-categories: linux keyboard xkb i3
+tags:   linux keyboard xkb i3
 ---
 *For more comfortable typing I use the Dvorak keyboard layout instead of Qwerty. However, I also prefer to use the caps lock key, which I rarely use, as an extra back space key. And I move caps lock to Shift + Back space. In this post I explain how it is configured.*
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Text to Hex and back"
 date:   2018-05-28 02:07:00 +0200
-categories: linux security
+tags:   linux security
 ---
 *In case you want to know the exact binary representation of you data on disk or convert binary data to text. We use hexadecimal numbers as intermediate representation.*
 

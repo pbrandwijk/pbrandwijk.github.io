@@ -2,7 +2,9 @@
 layout: post
 title:  "Chronorder"
 date:   2013-03-18 12:00:00 +0200
-categories: haskell chronorder
+tags:
+  - haskell
+  - chronorder
 ---
 *The command line program `chronorder` is written for Unix-like operating systems. It is a small utility for renaming files. Its default behavior is to rename files so that the alphabetical order matches the chronological order. To do this, an index number is prepended to every file, starting at "1" for the oldest file in the directory.*
 

@@ -2,6 +2,7 @@
 layout:   post
 title:    "All Java is created equal?"
 date:     2018-07-22 12:00:00 +0200
+tags:     quality
 featured_article:   true
 ---
 The goal of the IdSpace project is to create tooling for collaborative, distributed product innovation. This means that distributed teams would no longer be hindered by not being present at a single location to do creative work together. Using an innovation process of several phases, a team uses the on line tools to interact with each other.

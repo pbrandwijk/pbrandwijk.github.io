@@ -2,7 +2,7 @@
 layout: post
 title:  "Control backlight and brightness via command line"
 date:   2018-05-28 23:30:00 +0200
-categories: linux i3
+tags:   linux i3
 ---
 *If you use i3 or a similar tool as your window manager, you may have trouble adjusting your screen's backlight and brightness settings. This post shows you how to control them from the command line.*
 

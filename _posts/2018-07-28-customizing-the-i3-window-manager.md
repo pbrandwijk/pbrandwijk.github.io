@@ -2,7 +2,7 @@
 layout: post
 title:  "Customizing the i3 window manager"
 date:   2018-07-28 12:00:00 +0200
-categories: linux i3
+tags:   linux i3
 ---
 *If you use i3 as your window manager, you may have trouble configuring some specific keys for volume control, brightness control and media player controls. This post shows you how to customize your i3 window manager.*
 
