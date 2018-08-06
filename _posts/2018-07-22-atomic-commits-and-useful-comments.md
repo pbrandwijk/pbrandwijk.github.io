@@ -2,7 +2,10 @@
 layout:   post
 title:    "Atomic commits and useful comments"
 date:     2018-07-22 12:00:00 +0200
-tags:     quality
+tags:     
+  - quality
+  - "version control"
+  - git
 featured_article: true
 ---
 Every serious development project needs some sort of version control. Popular options today include `git`, `mercurial`, `bazar` and `svn`. Each of these systems works a bit differently, but all of them have the concept of a 'commit' in common.
@@ -18,6 +21,8 @@ An atomic commit constrains a commit in two ways:
 2. The commit may not break the build. It should also no violate any test cases, unless you use TDD or BDD, in which case adding failing tests is part of the process.
 
 ## How to make an atomic commit
-The description I have given above is not exact science. It boils down to guiding principles and common sense.
+The description I have given above is not exact science. Every code base under version control is different and it would be impossible to define a single procedure that applies to all situations. It boils down to guiding principles and common sense.
 
-## Why should you make atomic commits?
+So start thinking about the impact on your code base as soon as you define a requirement. If it needs a lot of changes in different places, maybe you can break it up into several requirement. Likewise, when developing, think about what changes are most likely to come in the future and try to set up your code so that such a change is easily performed with the fewest impact on your code.
+
+You will find that the guidelines given here combine very well with other development best practices, like agile-style requirements and loose coupling of code. This way, one practice reinforces the others.
