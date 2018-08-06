@@ -3,8 +3,17 @@ layout:   post
 title:    "Atomic commits and useful comments"
 date:     2018-07-22 12:00:00 +0200
 tags:     quality
-featured_article:   true
+featured_article: true
 ---
-The goal of the IdSpace project is to create tooling for collaborative, distributed product innovation. This means that distributed teams would no longer be hindered by not being present at a single location to do creative work together. Using an innovation process of several phases, a team uses the on line tools to interact with each other.
+Every serious development project needs some sort of version control. Popular options today include `git`, `mercurial`, `bazar` and `svn`. Each of these systems works a bit differently, but all of them have the concept of a 'commit' in common.
 
-Pieter was responsible for the development of *Liferay portlets*, which are the scaffolding on which the platform is build. He was also one of the developers of the shared canvas, which allows a distributed team to simultaneously draw in real time. Although nowadays various commercial implementations of such a shared canvas exist, IdSpace was the first platform to offer this feature.
+## What is a commit?
+Committing something to version control means that you have made some changes to your code and want to save these changes as a new version. Also, you want to be able to go back at anytime to the version of your code as it was before your commit. And likewise you want to be able to reproduce the current version of your code in the future, when possibly many other version have succeeded it. All this you achieve by committing code to your version control system.
+
+## What is an atomic commit?
+
+
+## How to make an atomic commit
+
+
+## Why should you make atomic commits?
