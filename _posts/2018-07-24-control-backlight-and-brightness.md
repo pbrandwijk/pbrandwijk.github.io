@@ -12,7 +12,7 @@ I'm using Ubuntu 18.04 as my OS. You may need to install `xbacklight` and `xrand
 ## Setting the backlight
 Relevant files for the backlight are stored under `/sys/class/backlight`. You can use the following commands to control the backlight:
 
-{% highlight shell %}
+{% highlight console %}
 pieter@rover:~$ xbacklight -get
 pieter@rover:~$ xbacklight -set 50
 pieter@rover:~$ xbacklight -dec 10
@@ -21,7 +21,7 @@ pieter@rover:~$ xbacklight -inc 10
 
 If you get an error message saying "no outputs have backlight properties", you may need to use `sudo` to create a file `/etc/X11/xorg.conf` with the following content:
 
-{% highlight shell %}
+{% highlight console %}
 pieter@rover:~$ cat /etc/X11/xorg.conf
 Section "Device"
 Identifier "Card0"
@@ -33,7 +33,7 @@ EndSection
 ## Setting the brightness
 Find out the name of your screen device with `xrandr` or `xrandr --verbose`:
 
-{% highlight shell %}
+{% highlight console %}
 pieter@ubuntu:~$ xrandr --verbose
 Screen 0: minimum 8 x 8, current 1600 x 900, maximum 32767 x 32767
 eDP1 connected primary 1600x900+0+0 (0x48) normal (normal left inverted right x axis y axis) 390mm x 220mm
@@ -49,7 +49,7 @@ Note that by adding the file `/etc/X11/xorg.conf` as described above, the name o
 
 Use the following commands to control the screen brightness:
 
-{% highlight shell %}
+{% highlight console %}
 pieter@ubuntu:~$ xrandr --output eDP1 --brightness 1.7
 pieter@ubuntu:~$ xrandr --output eDP1 --brightness 0.6
 pieter@ubuntu:~$ xrandr --output eDP1 --brightness -0.6
@@ -57,7 +57,7 @@ pieter@ubuntu:~$ xrandr --output eDP1 --brightness -0.6
 
 The `xrandr` tool has some other options you can play with too.
 
-{% highlight shell %}
+{% highlight console %}
 pieter@ubuntu:~$ xrandr --output eDP1 --gamma 2:2:1
 pieter@ubuntu:~$ xrandr --output eDP1 --gamma 1:1:1
 pieter@ubuntu:~$ xrandr --output eDP1 --reflect x

@@ -9,14 +9,14 @@ tags:   linux i3
 ## Preliminaries
 I'm using Ubuntu 18.04 as my OS. As keyboard layout I use Dvorak (us international with dead key) and I use `xmodmap` to turn the caps lock key into BackSpace and give the caps lock function to Shift + BackSpace. See [this post][pb2]. Also, you need `i3` installed with:
 
-```shell
+```console
 pieter@ubuntu:~$ sudo apt install i3
 ```
 
 ## Configure i3
 To change the configuration of i3, copy `/etc/i3/config` to `~/.i3/config` (or `~/.config/i3/config` if you like the XDG directory scheme) and edit it. Creating a custom config file for i3 overwrites the entire config of `/etc/i3/config`, that's why you need to copy it. I recommend making you additions to the bottom of this file.
 
-```shell
+```console
 pieter@ubuntu:~$ cp /etc/i3/config ~/.i3/config
 ```
 
@@ -67,18 +67,18 @@ Keep in mind that when you switch your keyboard layout, you may also want to upd
 
 ### Getting current bindings
 Use this command to get an overview of to which respective XF86 keyboard symbol each key on your keyboard binds:
-```shell
+```console
 pieter@ubuntu:~$ xmodmap -pke
 ```
 
 ### Analysing input events
 All events (including mouse):
-```shell
+```console
 pieter@ubuntu:~$ xev
 ```
 
 Only keyboard:
-```shell
+```console
 pieter@ubuntu:~$ xev -event keyboard
 ```
 

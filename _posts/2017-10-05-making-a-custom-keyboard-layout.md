@@ -59,22 +59,22 @@ exec xmodmap ~/.Xmodmap
 
 ### Gnome Tweak tool
 If you use Gnome, the Gnome tweak tool allows you to do configurations that you won't find in the standard settings.
-```shell
-sudo apt install gnome-tweak-tool
+```console
+pieter@ubuntu:~$ sudo apt install gnome-tweak-tool
 ```
 
 ## Switching the keyboard layout on the commmand line
 If your GUI has no option to switch keyboard layout, you can use the following to do it with the command line:
-```shell
-setxkbmap -layout us -variant dvorak-intl-swap-caps
-setxkbmap -layout us -variant dvorak-intl
-setxkbmap -layout us -variant intl
+```console
+pieter@ubuntu:~$ setxkbmap -layout us -variant dvorak-intl-swap-caps
+pieter@ubuntu:~$ setxkbmap -layout us -variant dvorak-intl
+pieter@ubuntu:~$ setxkbmap -layout us -variant intl
 ```
 
 Use the following to check which configuration you are currently using:
 
-```shell
-setxkbmap -query
+```console
+pieter@ubuntu:~$ setxkbmap -query
 ```
 
 ## Resources
