@@ -10,10 +10,14 @@ Every serious development project needs some sort of version control. Popular op
 ## What is a commit?
 Committing something to version control means that you have made some changes to your code and want to save these changes as a new version. Also, you want to be able to go back at anytime to the version of your code as it was before your commit. And likewise you want to be able to reproduce the current version of your code in the future, when possibly many other version have succeeded it. All this you achieve by committing code to your version control system.
 
-## What is an atomic commit?
+In principle, version control systems to not limit you in how you commit your code. You could go on and make a lot of changes to your code, and commit when it's time to go to bed, for example. Likewise, you are free to commit code that makes the compilation of the code fail, no matter how annoying this is to yourself and other developers.
 
+## What is an atomic commit?
+An atomic commit constrains a commit in two ways:
+1. You commit small changes, typically as small as possible to implement a feature. If the feature requires many changes to the code in different places, break it up into several commits.
+2. The commit may not break the build. It should also no violate any test cases, unless you use TDD or BDD, in which case adding failing tests is part of the process.
 
 ## How to make an atomic commit
-
+The description I have given above is not exact science. It boils down to guiding principles and common sense.
 
 ## Why should you make atomic commits?
