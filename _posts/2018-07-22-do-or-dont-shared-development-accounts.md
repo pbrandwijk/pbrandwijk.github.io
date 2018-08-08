@@ -5,6 +5,6 @@ date:     2018-07-22 12:00:00 +0200
 tags:     quality
 featured_article:   true
 ---
-The goal of the IdSpace project is to create tooling for collaborative, distributed product innovation. This means that distributed teams would no longer be hindered by not being present at a single location to do creative work together. Using an innovation process of several phases, a team uses the on line tools to interact with each other.
+Using a shared account that every one can use may seem like a good idea. After all, you don't have to go through the hassle of setting up and managing separate accounts for everyone. Also, you save yourself and the team from a lot of permission errors when times are though and you are willing to compromise basic security for speed of action. But beware! There is a price to pay when more than one person uses the same account.
 
-Pieter was responsible for the development of *Liferay portlets*, which are the scaffolding on which the platform is build. He was also one of the developers of the shared canvas, which allows a distributed team to simultaneously draw in real time. Although nowadays various commercial implementations of such a shared canvas exist, IdSpace was the first platform to offer this feature.
+That price is (ironically) accountability. With multiple people using the same account there is just no telling anymore who did what.
