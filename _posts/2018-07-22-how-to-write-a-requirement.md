@@ -26,7 +26,4 @@ In this last case, what needs fixing first is your requirement specification. Tr
 Developers obviously use the requirement specification to implement the software. This alone is reason enough why the specification should be as clear as possible. But other than that, the requirement document gives structure to the code base. Changes that functionally go together can be traced if the requirements are set up well. This is also why it is so important to link each commit to version control to a specification.
 
 ### Tester
-
-## Essential elements of a requirement specification
-
-## How NOT to deal with requirements
+Here's a shocker: without a specification that determines exactly what the expected behavior of a piece of software should be, the tester's job is meaningless. You might as well just send them home. Think about it, what do you test if it is not a well defined specification.
