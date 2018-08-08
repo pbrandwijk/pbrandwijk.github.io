@@ -20,6 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.pbrandwijk.com" # the base hostname & protocol for your site
 
 # Social media handles
+feedburner_url: "http://feeds.feedburner.com/PieterBrandwijkBlog"
 github_username: "pbrandwijk"
 github_url: "https://github.com/pbrandwijk"
 gitlab_username: "pbrandwijk"
