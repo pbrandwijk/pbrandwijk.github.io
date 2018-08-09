@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "How to write a requirement"
-date:     2018-07-22 12:00:00 +0200
+date:     2018-08-08 12:00:00 +0200
 tags:     quality requirements
 featured_article:   true
 ---
