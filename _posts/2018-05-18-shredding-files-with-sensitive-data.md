@@ -29,7 +29,7 @@ $ echo This is sensitive data > data.txt
 $ srm data.txt
 ```
 
-# Links
+## Resources
 - [Wikipedia: Shred_(Unix)][wikipedia]
 - [Establish your online identity using GnuPG][saminiir]
 
