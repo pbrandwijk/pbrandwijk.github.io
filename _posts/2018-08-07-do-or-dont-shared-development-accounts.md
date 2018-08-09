@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "Do or Don't: Shared development accounts"
-date:     2018-07-22 12:00:00 +0200
+date:     2018-08-07 12:00:00 +0200
 tags:     quality
 featured_article:   true
 ---
