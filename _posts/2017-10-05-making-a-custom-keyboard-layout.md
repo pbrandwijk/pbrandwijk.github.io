@@ -61,6 +61,7 @@ exec xmodmap ~/.Xmodmap
 If you use Gnome, the Gnome tweak tool allows you to do configurations that you won't find in the standard settings.
 ```console
 $ sudo apt install gnome-tweak-tool
+$ gnome-tweaks
 ```
 
 ## Switching the keyboard layout on the commmand line
