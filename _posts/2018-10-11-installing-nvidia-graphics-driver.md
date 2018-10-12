@@ -15,7 +15,11 @@ tags:
 I'm using Ubuntu 18.04 as my OS on an HP Pavilion laptop with an NVIDIA GeForce GTX 1050 graphics card.
 
 ## Issue
-When installing Ubuntu screen freezes very quickly after boot. Both from USB and later from hard drive. A quick workaround was to press `e` in GRUB2 boot menu and add `nomodeset` after the `splash` option on the line that says `linux`. This had to be repeated at every boot.
+When installing Ubuntu screen freezes very quickly after boot. Both from USB and later from hard drive. A quick workaround was to press 'e' in GRUB2 boot menu and add 'nomodeset' after the word 'splash' on the line that starts with 'linux'. like this:
+```
+linux /boot/vmlinuz-linux root=UUID=978e3e81-8048-4ae1-8a06-aa727458e8ff quiet splash nomodeset
+```
+And then press `Ctrl+x` to boot. This had to be repeated at every boot. You could make this permanent by editing the `GRUB_CMDLINE_LINUX_DEFAULT` variable in `/etc/default/grub`.
 
 ## Solution
 The correct driver for the graphics card was missing. I looked up the correct driver at the NVIDIA web site, in this case driver number 390, and executed in terminal:
@@ -25,3 +29,5 @@ $ nvidia-settings
 ```
 
 The command `nvidia-settings` will give an error and say driver is not loaded if you do this immediately after install. For this to work you must first reboot the system. Then the driver will be loaded and the issue should be solved.
+
+In `nvidia-settings` under the tab "PRIME profiles" you can select which graphics card to use. If you don't need the performance of your NVIDIA card you can change to another that consumes less power.
