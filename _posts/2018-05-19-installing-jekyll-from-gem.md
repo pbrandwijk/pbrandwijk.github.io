@@ -43,6 +43,8 @@ Use `gem` to install the latest version of Jekyll:
 $ gem install jekyll
 ```
 
+Keep in mind that the `.gem` folder now contains compiled code dedicated to your current system. If you want to move to another system you cannot simply copy this folder to your new home folder. You will have to remove the `.gem` folder and recompile (reinstall) the gems.
+
 ## Resources
 - [Error while executing gem][stack]
 
