@@ -22,7 +22,7 @@ linux /boot/vmlinuz-linux root=UUID=978e3e81-8048-4ae1-8a06-aa727458e8ff quiet s
 And then press `Ctrl+x` to boot. This had to be repeated at every boot. You could make this permanent by editing the `GRUB_CMDLINE_LINUX_DEFAULT` variable in `/etc/default/grub`.
 
 ## Solution
-The correct driver for the graphics card was missing. I looked up the correct driver at the NVIDIA web site, in this case driver number 390, and executed in terminal:
+The correct driver for the graphics card was missing. I looked up the correct driver at the NVIDIA web site, in this case driver number 390, and executed in the terminal:
 ```console
 $ sudo apt install nvidia-driver-390
 $ nvidia-settings
