@@ -7,6 +7,10 @@ start-date: 2014-04-01
 end-date: 2015-08-01
 function: "Technical leader"
 location: "Eindhoven, The Netherlands"
+tags:
+  - Master Data Management
+  - Stibo Step
+  - XSLT
 permalink: /experience/MCM/
 ---
 The goal of the Marketing Content Management (MCM) project is to speed up and improve the product marketing process of Philips globally. This process involves the management of technical product data, the translations of marketing texts for all Philips target languages, the maintenance of product assets like pictures and photo-metric measurements and presenting the content on the Philips website, leaflets and manuals. It is of vital importance to Philips’ marketing strategy to significantly decrease the throughput time of this process from the three months which it currently takes.

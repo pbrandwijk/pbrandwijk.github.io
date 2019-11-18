@@ -7,6 +7,12 @@ start-date: 2015-08-01
 end-date: 2016-10-01
 function: "Service Architect"
 location: "Valencia, Spain"
+tags:
+  - Java
+  - Docker
+  - PaaS
+  - Git
+  - Jenkins
 permalink: /experience/Production-lines/
 ---
 Production Lines is a multinational service of Capgemini. Its objective is to create a uniform production line (also known as Platform as a Service, or PaaS) between all units and operating countries of Capgemini. The service offers a platform where the projects of the company can be managed from a single on-line interface. Besides that, Production Lines adds value by offering high flexibility between projects to assemble their production environment the way they want.

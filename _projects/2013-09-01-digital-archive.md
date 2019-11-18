@@ -7,6 +7,10 @@ start-date: 2013-05-01
 end-date: 2013-08-01
 function: "Senior Developer"
 location: "The Hague, The Netherlands"
+tags:
+  - Java
+  - Nuxeo
+  - PostgreSQL
 permalink: /experience/Digital-archive/
 ---
 The goal of the Digital Archive is offering an institute wide repository for storing and retrieving documents that are created during forensic investigation. Such a repository did not exist previously and the institute relied on paper files which were difficult to access and transfer.
