@@ -4,12 +4,12 @@ title:    "Master Data Management"
 date:     2019-06-19 20:00:00 +0200
 client:   "Action"
 start-date: 2018-10-15
-end-date: 2020-10-15
+end-date: 2020-04-15
 function: "Project Lead Developer"
 location: "Valencia, Spain and Utrecht, The Netherlands"
 permalink: /experience/Action-mdm/
 ---
-This client is a fast growing retail which is rapidly expanding business in Europe. To manage their master data, they are implementing Stibo Step as their MDM solution. I joined this project after two years into its implementation and took on the role of Lead developer.
+This client is a fast growing retailer which is rapidly expanding business in Europe. To manage their master data, they are implementing Stibo Step as their MDM solution. I joined this project after two years into its implementation and took on the role of Lead developer.
 
 ## Project in short
 - MDM solution based on Stibo Step
