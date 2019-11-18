@@ -13,9 +13,9 @@ This client is a fast growing retailer which is rapidly expanding business in Eu
 
 ## Project in short
 - MDM solution based on Stibo Step
-- Agile project using SCRUM
+- Agile project using scrum
 - Project team of about 15 people
-- Development team of 5 people
+- Development team of 7 people
 - Around 25.000 products
 - 7 countries
 - 5 languages
