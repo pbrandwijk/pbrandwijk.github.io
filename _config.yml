@@ -43,3 +43,6 @@ collections:
 
 # Use plugin to pretty print HTML output after Jekyll processing
 plugins: [jekyll-tidy]
+
+# Google analytics
+google_analytics_key: UA-152853370-1
