@@ -2,7 +2,7 @@
 layout:   post
 title:    "Cheat sheet i3 for Dvorak"
 date:     2018-10-12 10:20:00 +0200
-tags:     ubuntu i3 dvorak
+tags:     ubuntu i3 dvorak "cheat sheet"
 ---
 ## i3 Window Manager Cheat Sheet for Dvorak
 I could not find a cheat sheet for i3 based on the Dvorak keyboard layout, so I made my own.
