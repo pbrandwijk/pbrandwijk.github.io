@@ -4,7 +4,7 @@ title: "Email me with PGP"
 ---
 # {{ page.title }}
 
-I would like to invite you to use encryption to email me. For those who are familiar with PGP, you can get my public key from [https://pgp.surfnet.nl/](https://pgp.surfnet.nl/) or download it directly from [here]({{ "assets/pieter-brandwijk.asc" | prepend: site.baseurl }}).
+I would like to invite you to use encryption to email me. For those who are familiar with PGP, you can get my public key from [https://keyserver2.pgp.com/](https://keyserver2.pgp.com/) or download it directly from [here]({{ "assets/pieter-brandwijk.asc" | prepend: site.baseurl }}).
 
 My full key fingerprint is: {{ site.pgp_fingerprint }}.
 
