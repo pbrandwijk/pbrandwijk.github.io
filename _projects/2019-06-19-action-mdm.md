@@ -10,7 +10,10 @@ location: "Valencia, Spain and Utrecht, The Netherlands"
 tags:
   - Master Data Management
   - Stibo Step
+  - MuleSoft
   - Web services
+  - SOAP
+  - REST
   - Selenium
 permalink: /experience/Action-mdm/
 ---
@@ -29,9 +32,11 @@ This client is a fast growing retailer which is rapidly expanding business in Eu
 - The establishment of standard form of describing the system requirements, first and foremost by defining the acceptance criteria of each user story.
 - The introduction of version control based on git. This also includes a code review process based on pull requests
 - The introduction of a structured deployment plan and performing a test run of this plan before the actual deployment. This greatly reduced the amount of incidents on production due to deployment errors
+- The integration with MuleSoft ESB, using secure HTTPS for two-way communication
 - The creation of open source tooling to assist various development tasks
 - The creation of a development framework to develop and unit test the business rules created for the system
-- The setting up of a fully automated regression test set
+- The setting up of a fully automated regression test set based on SOAP and REST
+web services
 - Establishing clear development guidelines so that development is done more uniformly and uses best practices
 
 ## Utilities
