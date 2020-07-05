@@ -16,7 +16,7 @@ I'm using Ubuntu 20.04 with all relevant software for this post installed via `a
 
 ## Issue
 I use `feh` to set my background wallpaper for `i3` sessions. Sometimes this gives the following error: 
-```console
+```text
 libpng warning: iCCP: known incorrect sRGB profile*
 ```
 This happens when `feh` tries to load an PNG image using the 1.6 version of `libpng`, which treats this warning as an error. 
