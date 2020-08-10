@@ -5,6 +5,7 @@ date:   2020-08-07 18:00:00 +0200
 tags: 
   - deployment plan
   - release management
+featured_article: true
 ---
 *How do you create a deployment plan that is accurate and helps your team to have a more stable and trustworthy deployment. This post describes what should be in a deployment plan, so you can rely on it for your production releases.*
 
