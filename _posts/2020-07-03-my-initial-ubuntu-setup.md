@@ -1,0 +1,117 @@
+---
+layout: post
+title:  "My initial Ubuntu setup"
+date:   2020-07-03 18:00:00 +0200
+tags:   
+  - ubuntu
+---
+*I like to do a fresh install of my operating system every once in a while, as a cleaning up action. In this post I describe the actions I take to set up the system according to my preferences.*
+
+## Preliminaries
+I'm using Ubuntu 20.04 as my OS on an HP Pavilion laptop with an NVIDIA GeForce GTX 1050 graphics card. I'm assuming in this post that the installation was successful, and the system is operating as it should be.
+
+## Firewall
+The Uncomplicated Firewall `ufw` comes preinstalled, but is turned off by default. My configuration:
+```console
+$ sudo apt install guwf    # Install a GUI for uwf
+$ sudo ufw allow ssh/tcp
+$ sudo ufw logging on
+$ sudo ufw enable
+$ sudo ufw status          # Print the status and active rules
+```
+
+## i3
+I like using `i3` as my tiling window manager. To get a nice back ground wallpaper I also install `feh`.
+```console
+$ sudo apt install i3 feh
+```
+To get the wallpaper at the start up of a user session, make sure to add the `feh` command to `~/.profile`.
+```shell
+# Set the background wallpaper - intended for sessions with i3
+feh --randomize --bg-fill ~/Pictures/wallpapers/*
+```
+Be aware that if there are any issues with loading the background you will get an ugly error at the start of your session. 
+
+## Utilities
+Install all the below utilities via `apt`:
+```console
+$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode
+```
+
+## Dotfiles
+I keep as many as possible configuration (dot) files in a separate folder managed with git version control. This is tidier and allows easy portability. For this to work you do need to reference these files in the location that is expected by the respective program.
+
+## Oh my Zsh
+This makes the shell look a lot better
+```console
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Jekyll
+I prefer installing `jekyll` via `gem`, than via `apt`, as that gives a more recent version. Make sure that you have the `RUBY_HOME` environment variable set and that `RUBY_HOME/bin` is on your `PATH`. 
+```console
+$ sudo apt install ruby-full build-essentials zlib1g-dev
+$ gem install jekyll jekyll-tidy bundler
+```
+
+For `gem`, make sure you have `~/.gemrc` set up with at least the following settings:
+```text
+:gemdir:
+    - ~/.gem/ruby
+install: --user-install
+```
+
+## Ledger
+Ledger CLI and hledger are great tools to manage your accounting needs. Make sure that you have the `LEDGER_FILE`, `LEDGER_INIT` and `LEDGER_PRICE_DB` environment variables set up.
+```console
+$ sudo apt install ledger hledger
+```
+
+## Docker
+```console
+$ sudo snap install docker
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+```
+
+## Java
+As I am a Java developer, I like to have a recent JDK installed:
+```console
+$ sudo apt install openjdk-14-jdk
+```
+
+## IntelliJ
+```console
+$ sudo snap install intellij-idea-ultimate --classic
+```
+
+## VPN
+Download the `.ovpn` files from your VPN provider for the connections that you want to add. Import them and set up the user name and password as described in [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}).
+
+Then add the automatic activation of a VPN connection at the start of a user session to `~/.profile`:
+```shell
+# Check if any VPN is active via NetworkManager.
+if [[ $(nmcli c show --active | grep vpn) ]]; then
+  echo "VPN already active"
+else
+  # Check if any VPN configutation exists
+  if [[ $(nmcli c show | grep vpn) ]]; then
+    # Connect to the first one on the list
+    nmcli con up id $(nmcli c show | grep vpn | awk '{ print $1 }' | head -n 1) passwd-file ~/.vpncreds
+  else
+    echo "No VPNs available via NetworkManager"
+  fi
+fi
+```
+
+## Disable tracker
+Ubuntu by default has the `tracker` service enabled, which indexes files on your hard drive to make them easily searchable. However, in my experience this process often takes up 100% of the CPU. Also I don't really need this function, so I disable it.
+```console
+$ gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+$ gsettings set org.freedesktop.Tracker.Miner.Files ignored-files "['*']"
+$ gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
+$ sudo pkill tracker
+$ rm -rf ~/.cache/tracker
+$ rm -rf ~/.local/share/tracker
+```
+
