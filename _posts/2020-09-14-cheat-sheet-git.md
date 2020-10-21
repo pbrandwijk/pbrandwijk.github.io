@@ -41,9 +41,9 @@ $ git rebase -i HEAD~3          # Interactively make changes on the last 3 commi
 
 ## Other
 ```console
-$ git status                    # Get status info of the repo
-$ git log --oneline [file]      # List the history in oneliners
-$ git grep <regexp> $(git rev-list --all)           # Search for file content in the entire repo history
+$ git status                                        # Get status info of the repo
+$ git log --oneline <file>                          # List the history in oneliners
+$ git grep <expression> $(git rev-list --all)       # Search for file content in the entire repo history
 $ git rev-list --all | xargs git grep <expression>  # Like above, but for larger repos
 $ git log -p HEAD..origin/master                    # Show list of differences after a git fetch
 $ git diff HEAD...origin/master                     # Show a single diff after git fetch
