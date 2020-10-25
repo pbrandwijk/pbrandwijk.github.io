@@ -13,11 +13,11 @@ I'm using Ubuntu 20.04 as my OS on an HP Pavilion laptop with an NVIDIA GeForce 
 ## Firewall
 The Uncomplicated Firewall `ufw` comes preinstalled, but is turned off by default. My configuration:
 ```console
-$ sudo apt install guwf    # Install a GUI for uwf
-$ sudo ufw allow ssh/tcp
-$ sudo ufw logging on
-$ sudo ufw enable
-$ sudo ufw status          # Print the status and active rules
+$ sudo apt install gufw     # Install a GUI for ufw
+$ sudo ufw allow ssh/tcp    # Allow connections over ssh
+$ sudo ufw logging on       # Enable logging
+$ sudo ufw enable           # Turn on ufw
+$ sudo ufw status           # Print the status and active rules
 ```
 
 ## i3
@@ -38,17 +38,23 @@ Install all the below utilities via `apt`:
 $ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode
 ```
 
+If you want to allow ssh connections, also install openssh-server:
+```console
+$ sudo apt install openssh-server
+```
+
 ## Dotfiles
 I keep as many as possible configuration (dot) files in a separate folder managed with git version control. This is tidier and allows easy portability. For this to work you do need to reference these files in the location that is expected by the respective program.
 
 ## Oh my Zsh
-This makes the shell look a lot better
+This makes the shell look a lot better. Make sure you have `zsh` installed first. If you already have a `.zshrc` file, it will be backed up and then overwritten.
 ```console
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+You will be asked if you want to make `zsh` your default shell. Pick Yes.
 
 ## Jekyll
-I prefer installing `jekyll` via `gem`, than via `apt`, as that gives a more recent version. Make sure that you have the `RUBY_HOME` environment variable set and that `RUBY_HOME/bin` is on your `PATH`. 
+I prefer installing `jekyll` via `gem`, than via `apt`, as that gives a more recent version. Make sure that you have the `RUBY_HOME` environment variable set and that `RUBY_HOME/bin` is on your `PATH`:
 ```console
 $ sudo apt install ruby-full build-essentials zlib1g-dev
 $ gem install jekyll jekyll-tidy bundler
@@ -62,7 +68,7 @@ install: --user-install
 ```
 
 ## Ledger
-Ledger CLI and hledger are great tools to manage your accounting needs. Make sure that you have the `LEDGER_FILE`, `LEDGER_INIT` and `LEDGER_PRICE_DB` environment variables set up.
+Ledger CLI and hledger are great tools to manage your accounting needs. Make sure that you have the `LEDGER_FILE`, `LEDGER_INIT` and `LEDGER_PRICE_DB` environment variables set up:
 ```console
 $ sudo apt install ledger hledger
 ```
@@ -77,10 +83,11 @@ $ sudo usermod -aG docker $USER
 ## Java
 As I am a Java developer, I like to have a recent JDK installed:
 ```console
-$ sudo apt install openjdk-14-jdk
+$ sudo apt-get install default-jdk -y
 ```
 
 ## IntelliJ
+This is my preferred IDE:
 ```console
 $ sudo snap install intellij-idea-ultimate --classic
 ```
