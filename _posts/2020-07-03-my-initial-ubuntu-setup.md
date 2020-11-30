@@ -35,12 +35,14 @@ Be aware that if there are any issues with loading the background you will get a
 ## Utilities
 Install all the below utilities via `apt`:
 ```console
-$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode
+$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks
 ```
 
 If you want to allow ssh connections, also install openssh-server:
 ```console
 $ sudo apt install openssh-server
+$ sudo vim /etc/ssh/ssh_config     # Set X11Forwarding yes and X11UseLocalhost no
+$ systemctl restart sshd
 ```
 
 ## Dotfiles
@@ -121,4 +123,3 @@ $ sudo pkill tracker
 $ rm -rf ~/.cache/tracker
 $ rm -rf ~/.local/share/tracker
 ```
-
