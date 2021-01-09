@@ -2,7 +2,7 @@
 layout:   post
 title:    "Cheat sheet git"
 date:     2020-09-14 23:00:00 +0200
-tags:     
+tags:
  - linux 
  - git 
  - cheat sheet
@@ -63,6 +63,7 @@ $ git status                                        # Get status info of the rep
 $ git log --oneline <file>                          # List the history in oneliners
 $ git grep <expression> $(git rev-list --all)       # Search for file content in the entire repo history
 $ git rev-list --all | xargs git grep <expression>  # Like above, but for larger repos
+$ git rev-list --all | xargs -I '{}' git ls-tree --full-tree -r '{}' | grep '.*<file name>*' # Check if the given file name ever existed in the repository
 $ git log -p HEAD..origin/master                    # Show list of differences after a git fetch
 $ git diff HEAD...origin/master                     # Show a single diff after git fetch
 $ git remote -v                                     # Show the protocol and location of the remote repositories
