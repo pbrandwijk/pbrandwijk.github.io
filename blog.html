@@ -6,6 +6,8 @@ navigation_weight: 2
 <section class="container">
   <h1 class="page-heading">Posts</h1>
 
+  <p class="rss-subscribe">subscribe <a href="{{ site.feedburner_url }}">via RSS</a></p>
+
   <ul class="link-list">
     {% for post in site.posts %}
       <li>
@@ -18,6 +20,4 @@ navigation_weight: 2
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ site.feedburner_url }}">via RSS</a></p>
 </section>
