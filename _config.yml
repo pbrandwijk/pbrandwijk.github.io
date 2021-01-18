@@ -42,4 +42,6 @@ collections:
     output: true
 
 # Use plugin to pretty print HTML output after Jekyll processing
-plugins: [jekyll-tidy]
+plugins: 
+ - jekyll-tidy
+ - jekyll-feed
