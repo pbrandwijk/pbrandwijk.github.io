@@ -58,8 +58,8 @@ You will be asked if you want to make `zsh` your default shell. Pick Yes.
 ## Jekyll
 I prefer installing `jekyll` via `gem`, than via `apt`, as that gives a more recent version. Make sure that you have the `RUBY_HOME` environment variable set and that `RUBY_HOME/bin` is on your `PATH`:
 ```console
-$ sudo apt install ruby-full build-essentials zlib1g-dev
-$ gem install jekyll jekyll-tidy bundler
+$ sudo apt install ruby-full build-essential zlib1g-dev
+$ gem install jekyll jekyll-tidy jekyll-feed bundler
 ```
 
 For `gem`, make sure you have `~/.gemrc` set up with at least the following settings:
@@ -87,6 +87,13 @@ As I am a Java developer, I like to have a recent JDK installed:
 ```console
 $ sudo apt-get install default-jdk -y
 ```
+
+## Haskell
+As one of my favorite languages, I also make sure to have Haskell ready. The easiest and quickest way is:
+```console
+$ sudo apt install haskell-platform
+```
+For a more scalable solution, have a look at [`stack'][stack].
 
 ## IntelliJ
 This is my preferred IDE:
@@ -123,3 +130,8 @@ $ sudo pkill tracker
 $ rm -rf ~/.cache/tracker
 $ rm -rf ~/.local/share/tracker
 ```
+
+## Resources
+- [The Haskell Tool Stack][stack]
+
+[stack]: https://docs.haskellstack.org/en/stable/README/
