@@ -93,7 +93,7 @@ As one of my favorite languages, I also make sure to have Haskell ready. The eas
 ```console
 $ sudo apt install haskell-platform
 ```
-For a more scalable solution, have a look at [`stack'][stack].
+For a more scalable solution, have a look at [stack][stack].
 
 ## IntelliJ
 This is my preferred IDE:
