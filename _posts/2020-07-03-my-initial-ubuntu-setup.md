@@ -101,6 +101,15 @@ This is my preferred IDE:
 $ sudo snap install intellij-idea-ultimate --classic
 ```
 
+## Flatpak
+Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
+```console
+$ sudo apt install flatpak
+$ flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+$ flatpak install flathub org.gimp.GIMP
+$ flatpak install flathub org.audacityteam.Audacity
+```
+
 ## VPN
 Download the `.ovpn` files from your VPN provider for the connections that you want to add. Import them and set up the user name and password as described in [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}).
 
