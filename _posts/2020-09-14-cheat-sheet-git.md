@@ -24,6 +24,16 @@ $ git merge --abort             # In case a pull gave merge conflicts, rollback 
 $ git fetch                     # Get the new commits, but do not apply them yet
 $ git reset --hard HEAD         # Go back to the HEAD revision (undo all changes to versioned files)
 $ git checkout --track origin/<branch> # Fetch, track and checkout a branch from origin
+$ git checkout -b <branch>      # Create branch if it didn't exist and check out
+$ git remote prune origin       # Delete all local branches that are not on origin
+```
+
+## Check merge
+Use this to check if merging a branch will give merge conflicts without actually performing the merge
+```console
+$ git merge --no-commit --no-ff BRANCH-TO-MERGE
+$ echo $?                       # Check the error output from the last command
+$ git merge --abort
 ```
 
 ## Branching
@@ -84,6 +94,7 @@ $ git rev-list --all | xargs -I '{}' git ls-tree --full-tree -r '{}' | grep '.*<
 $ git log -p HEAD..origin/master                    # Show list of differences after a git fetch
 $ git diff HEAD...origin/master                     # Show a single diff after git fetch
 $ git remote -v                                     # Show the protocol and location of the remote repositories
+$ git remote show origin                            # Show info about remote repository
 $ git remote set-url origin ssh://git@github.com/<user>/<repo> # Change the protocol to ssh
 $ ssh-keygen -t ed25519 -C "<email>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair for usage with git via ssh
 ```
