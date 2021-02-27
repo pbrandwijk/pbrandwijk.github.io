@@ -31,7 +31,7 @@ $ git remote prune origin       # Delete all local branches that are not on orig
 ## Check merge
 Use this to check if merging a branch will give merge conflicts without actually performing the merge
 ```console
-$ git merge --no-commit --no-ff BRANCH-TO-MERGE
+$ git merge --no-commit --no-ff <branch>
 $ echo $?                       # Check the error output from the last command
 $ git merge --abort
 ```
