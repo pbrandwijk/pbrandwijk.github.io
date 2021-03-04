@@ -23,8 +23,6 @@ $ git merge <branch>            # Merge the commits from a local branch into the
 $ git merge --abort             # In case a pull gave merge conflicts, rollback everything
 $ git fetch                     # Get the new commits, but do not apply them yet
 $ git reset --hard HEAD         # Go back to the HEAD revision (undo all changes to versioned files)
-$ git checkout --track origin/<branch> # Fetch, track and checkout a branch from origin
-$ git checkout -b <branch>      # Create branch if it didn't exist and check out
 $ git remote prune origin       # Delete all local branches that are not on origin
 ```
 
@@ -41,6 +39,8 @@ $ git merge --abort
 $ git branch <branch>           # Create a new branch
 $ git checkout <branch>         # Switch to the given branch
 $ git checkout -b <branch>      # Switch to given branch and create it if it didn't exist
+$ git checkout -b <branch> <commit-hash> # Create new branch from a previous commit
+$ git checkout --track origin/<branch> # Fetch, track and checkout a branch from origin
 $ git branch -d <branch>        # Delete branch, but check that it has been merged
 $ git branch -D <branch>        # Delete branch whether or not it has been merged
 $ git push origin --delete <branch> # Delete a remote branch
