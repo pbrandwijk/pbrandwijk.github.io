@@ -4,7 +4,7 @@ title:  "Text to Hex and back"
 date:   2018-05-28 02:07:00 +0200
 tags:   linux security
 ---
-*In case you want to know the exact binary representation of you data on disk or convert binary data to text. We use hexadecimal numbers as intermediate representation.*
+*In case you want to know the exact binary representation of your data on disk or convert binary data to text. We use hexadecimal numbers as intermediate representation.*
 
 ## Preliminaries
 I'm using Ubuntu 18.04 as my OS. All tools used are installed on this system by default.
