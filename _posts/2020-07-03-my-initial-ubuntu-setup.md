@@ -95,20 +95,20 @@ $ sudo apt install haskell-platform
 ```
 For a more scalable solution, have a look at [stack][stack].
 
-## IntelliJ
-This is my preferred IDE:
-```console
-$ sudo snap install intellij-idea-ultimate --classic
-```
-
 ## Flatpak
 Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
 ```console
 $ sudo apt install flatpak
 $ flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+$ flatpak update
 $ flatpak install flathub org.gimp.GIMP
 $ flatpak install flathub org.audacityteam.Audacity
+$ flatpak install flathub com.obsproject.Studio
+$ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
+$ flatpak install flathub com.github.tchx84.Flatseal             # Manage permissions of Flatpak apps
 ```
+
+For IntelliJ, you may need to add a permission to access the JDK on your system. I did this by adding `/usr/lib/jvm` to the file permissions via Flatseal.
 
 ## VPN
 Download the `.ovpn` files from your VPN provider for the connections that you want to add. Import them and set up the user name and password as described in [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}).
