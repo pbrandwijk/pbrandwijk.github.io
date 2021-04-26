@@ -119,3 +119,8 @@ $ openssl x509 -noout -text -in cert.pem # Get info on the given certificate
 $ echo | openssl s_client -connect pbrandwijk.com:443 | openssl x509 -noout -text # Get SSL info of given domain
 $ ssh-keygen -t ed25519 -C "<user email address>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair in .ssh
 ```
+
+Zip
+```console
+$ zip -e archive.zip <file1> <file2> # Add given files or folders to a zip file and prompt user for a password
+```
