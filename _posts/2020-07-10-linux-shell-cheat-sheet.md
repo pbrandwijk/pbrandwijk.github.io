@@ -122,5 +122,7 @@ $ ssh-keygen -t ed25519 -C "<user email address>" -f ~/.ssh/git_id_ed25519 # Gen
 
 Zip
 ```console
-$ zip -e archive.zip <file1> <file2> # Add given files or folders to a zip file and prompt user for a password
+$ zip -e archive.zip <file1> <file2> # Add given files or folders to a zip file and prompt user for a password (insecure)
+$ 7z a -tzip -mem=AES256 -p archive.zip <file1> <file2>  # Create an encrypted zip file with AES-256 encryption
+$ 7z l -slt archive.zip              # Get metainfo about the zip file, including the encryption type
 ```
