@@ -103,6 +103,7 @@ $ xdg-open <file>               # Use default application for file type to open 
 $ fc-list                       # Show all fonts on the system and their path
 $ pdfunite a1.pdf b1.pdf c.pdf  # Join PDF documents
 $ cat /etc/systemd/logind.conf  # Login settings
+$ stty rows 50 cols 90          # Manually set the max rows and cols for the terminal
 ```
 
 Java
