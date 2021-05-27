@@ -35,15 +35,15 @@ A list of requirements that the deliverables must comply to. Only when all deliv
 
 ## Definition of Ready
 A list of all the criteria that must be met before the work on the deliverables of this user story can start. Some items on this list are specific to each user stories, while other items will apply to any story.
-- ... (items speficic to the user story)
+- ... (items specific to the user story)
 - User story is stored on the backlog with a title formatted as: ```As <role>, I am able to <functionality>, so that <reason>.```
-- User story is refined; assumptions, business process flow and acceptance criteria are documented.
+- User story is refined; assumptions, business process flow and acceptance criteria are documented
 - Story points are assigned to the user story
 - Dependency of the story is reduced to a minimum in relation to other user stories
 - It is validated which business lines/departments are affected
 - The architecture guidelines and design for the user story is clear for development team
 - The definition of done can be validated/delivered
-- In case of integration the data mapping must be specified by both sending and receiving parties and agreed upon by Action IT.
+- In case of integration the data mapping must be specified by both sending and receiving parties and agreed upon by IT
 - PO has prioritized and approved the user story
 
 ## Solution direction
