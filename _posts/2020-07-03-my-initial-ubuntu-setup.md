@@ -85,7 +85,13 @@ $ sudo usermod -aG docker $USER
 ## Java
 As I am a Java developer, I like to have a recent JDK installed:
 ```console
-$ sudo apt-get install default-jdk -y
+$ sudo apt install default-jdk -y
+```
+
+## Latex
+My favorite desktop publishing program.
+```console
+$ sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 ```
 
 ## Haskell
@@ -104,7 +110,7 @@ $ flatpak update
 $ flatpak install flathub org.gimp.GIMP
 $ flatpak install flathub org.audacityteam.Audacity
 $ flatpak install flathub com.obsproject.Studio
-$ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
+$ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community  # Gives problems due to restrictions, better install via snap
 $ flatpak install flathub com.github.tchx84.Flatseal             # Manage permissions of Flatpak apps
 ```
 
