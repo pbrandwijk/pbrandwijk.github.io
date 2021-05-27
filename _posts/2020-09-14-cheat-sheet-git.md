@@ -23,6 +23,7 @@ $ git merge <branch>            # Merge the commits from a local branch into the
 $ git merge --abort             # In case a pull gave merge conflicts, rollback everything
 $ git fetch                     # Get the new commits, but do not apply them yet
 $ git reset --hard HEAD         # Go back to the HEAD revision (undo all changes to versioned files)
+$ git push origin +HEAD         # Push the new HEAD to the remote branch (after resetting)
 $ git remote prune origin       # Delete all local branches that are not on origin
 ```
 
@@ -44,6 +45,8 @@ $ git checkout --track origin/<branch> # Fetch, track and checkout a branch from
 $ git branch -d <branch>        # Delete branch, but check that it has been merged
 $ git branch -D <branch>        # Delete branch whether or not it has been merged
 $ git push origin --delete <branch> # Delete a remote branch
+$ git branch -m <new name>      # Rename current branch
+$ git push origin -u <new name> # Reset upstream branch
 ```
 
 ## Stashing
