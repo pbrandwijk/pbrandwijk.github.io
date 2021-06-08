@@ -11,7 +11,7 @@ Ruby and Ruby gems. This post explains how.*
 I'm using Ubuntu 18.04 as my OS.
 
 ## Install Ruby and C++ compile tools
-You will need a few depedencies installed on your system in order for the gem to be
+You will need a few dependencies installed on your system in order for the gem to be
 able to compile. Install them with the following command:
 ```console
 $ sudo apt install ruby ruby-dev make gcc g++
@@ -29,7 +29,7 @@ Put the following in `~/.gemrc`:
 install: --user-install
 ```
 
-Also, be sure to add the Ruby bin folder to your PATH variable in `~/.bash_profile`, lite in this snippet:
+Also, be sure to add the Ruby bin folder to your PATH variable in `~/.bash_profile`, like in this snippet:
 ```
 # Add ruby home, defined in ~/.gemrc
 RUBY_HOME="~/.gem/ruby/2.5.0"
