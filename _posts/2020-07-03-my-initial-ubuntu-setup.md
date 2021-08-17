@@ -112,6 +112,7 @@ $ flatpak install flathub org.audacityteam.Audacity
 $ flatpak install flathub com.obsproject.Studio
 $ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community  # Gives problems due to restrictions, better install via snap
 $ flatpak install flathub com.github.tchx84.Flatseal             # Manage permissions of Flatpak apps
+$ flatpak install flathub com.vscodium.codium
 ```
 
 For IntelliJ, you may need to add a permission to access the JDK on your system. I did this by adding `/usr/lib/jvm` to the file permissions via Flatseal.
