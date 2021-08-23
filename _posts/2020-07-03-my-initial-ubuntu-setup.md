@@ -21,7 +21,7 @@ $ sudo ufw status           # Print the status and active rules
 ```
 
 ## i3
-I like using `i3` as my tiling window manager. To get a nice back ground wallpaper I also install `feh`.
+I like using `i3` as my tiling window manager. To get a nice background wallpaper I also install `feh`.
 ```console
 $ sudo apt install i3 feh
 ```
@@ -35,7 +35,7 @@ Be aware that if there are any issues with loading the background you will get a
 ## Utilities
 Install all the below utilities via `apt`:
 ```console
-$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar
+$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar httpie seahorse calcurse
 ```
 
 If you want to allow ssh connections, also install openssh-server:
@@ -88,6 +88,11 @@ As I am a Java developer, I like to have a recent JDK installed:
 $ sudo apt install default-jdk -y
 ```
 
+## IntelliJ
+```console
+$ sudo snap install intellij-idea-ultimate --classic
+```
+
 ## Latex
 My favorite desktop publishing program.
 ```console
@@ -101,6 +106,12 @@ $ sudo apt install haskell-platform
 ```
 For a more scalable solution, have a look at [stack][stack].
 
+## Visual Studio Codium
+The open soure (and tracker free) version of VS Code.
+```console
+$ snap install codium
+```
+
 ## Flatpak
 Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
 ```console
@@ -110,9 +121,9 @@ $ flatpak update
 $ flatpak install flathub org.gimp.GIMP
 $ flatpak install flathub org.audacityteam.Audacity
 $ flatpak install flathub com.obsproject.Studio
-$ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community  # Gives problems due to restrictions, better install via snap
+$ flatpak install flathub com.calibre_ebook.calibre
+$ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community  # Gives problems due to file system restrictions, better install via snap
 $ flatpak install flathub com.github.tchx84.Flatseal             # Manage permissions of Flatpak apps
-$ flatpak install flathub com.vscodium.codium
 ```
 
 For IntelliJ, you may need to add a permission to access the JDK on your system. I did this by adding `/usr/lib/jvm` to the file permissions via Flatseal.
