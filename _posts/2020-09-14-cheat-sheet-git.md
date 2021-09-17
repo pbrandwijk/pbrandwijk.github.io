@@ -60,6 +60,7 @@ $ git stash drop                # Drop (delete) the last added stash
 ```console
 $ git reset --soft HEAD~1       # Undo the last commit, but keep the changes staged
 $ git reset --hard HEAD~1       # Undo the last commit and remove the changes
+$ git push -f origin <branch>   # After local reset, also delete the commits (s) from remote
 $ git checkout <commit> -- file1/to/restore file2/to/restore # Restore files to the given revision
 $ git checkout <commit> .       # Open a previous commit (don't forget the .)
 $ git rebase -i HEAD~n          # Interactively make changes on the last n commits
