@@ -23,7 +23,7 @@ For quite a few purposes you may need to reduce a string to a set of "simple" ch
 
 Normalizing a string means that any character containing a diacritical mark is split up in to two characters, one base character and one with the so-called combining diacritical mark. Since all these marks fall into a specific range of unicode characters, it then becomes easy to filter them out.
 
-### Representation of diacritical marks
+## Representation of diacritical marks
 In the below table an example is given of how the letter `é` can be represented. The first row shows the representation that is most often used, namely a single unicode character that contains both the base character and the accent. In the next three rows I show how the separate base character, combined with the acute accent character can give the same result. Depending on the font, you will either see a difference in the size and location of the accent, or you will hardly see any difference at all. If you want to, you can confirm that they are indeed different using a tool like [this one][unicodeconverter].
 
 | Code | Character |
