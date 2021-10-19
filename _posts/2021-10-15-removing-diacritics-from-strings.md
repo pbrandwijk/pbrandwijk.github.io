@@ -6,6 +6,7 @@ tags:
  - javascript
  - strings
  - node.js
+ - unicode
 ---
 *Ever wondered what actually happens when you use the normalize function to remove diacritics from a string? This post will tell you.*
 
@@ -35,7 +36,7 @@ In the below table an example is given of how the letter `é` can be represented
 
 To experiment with this yourself, you can input a unicode character directly by its number in Ubuntu linux using the key combination `Ctrl+Shift+U` followed by the hexadecimal code of the character. For an overview of unicode characters and their codes, [check here][unicodetable].
 
-## Example of normalization
+## Example
 In the below Node.js REPL session you can see the two phases of removing diacritics. First the string is normalized, then all characters in the combining diacritical marks range are removed. Lastly, I show how you can use the normalized string to replace the base characters while keeping the diacritical marks where they are.
 
 ```javascript
@@ -62,6 +63,8 @@ If you copy these assignments to a Node.js REPL you can experiment with this for
 ## Resources
 - [Combining diacritical marks][unicodetable]
 - [Unicode converter][unicodeconverter]
+- [Unicode normalization forms][normalizationforms]
 
 [unicodetable]: https://unicode-table.com/en/blocks/combining-diacritical-marks/
 [unicodeconverter]: https://r12a.github.io/app-conversion/
+[normalizationforms]: http://www.unicode.org/reports/tr15/
