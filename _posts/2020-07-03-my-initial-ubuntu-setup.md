@@ -35,7 +35,7 @@ Be aware that if there are any issues with loading the background you will get a
 ## Utilities
 Install all the below utilities via `apt`:
 ```console
-$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar httpie seahorse calcurse
+$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar httpie seahorse calcurse htop qalc
 ```
 
 If you want to allow ssh connections, also install openssh-server:
@@ -49,7 +49,7 @@ $ systemctl restart sshd
 I keep as many as possible configuration (dot) files in a separate folder managed with git version control. This is tidier and allows easy portability. For this to work you do need to reference these files in the location that is expected by the respective program.
 
 ## Oh my Zsh
-This makes the shell look a lot better. Make sure you have `zsh` installed first. If you already have a `.zshrc` file, it will be backed up and then overwritten.
+This makes the shell look a lot better. Make sure you have `curl`, `zsh` and `git` installed first. If you already have a `.zshrc` file, it will be backed up and then overwritten.
 ```console
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
