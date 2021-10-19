@@ -41,7 +41,7 @@ In the below Node.js REPL session you can see the two phases of removing diacrit
 
 ```javascript
 // Create a string using "regular" characters with diacritics
-> const a = "Crème Brulée"
+> const a = "Crème Brulée";
 > a
 'Crème Brulée'
 // Use the standard normalize function
