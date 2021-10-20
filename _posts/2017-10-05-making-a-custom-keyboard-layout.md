@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Making a custom keyboard layout"
+title:  Making a custom keyboard layout
 date:   2017-10-05 12:00:00 +0200
-tags:   linux keyboard xkb i3
+tags:   linux keyboard xkb i3 xmodmap xev
 ---
 *For more comfortable typing I use the Dvorak keyboard layout instead of Qwerty. However, I also prefer to use the caps lock key, which I rarely use, as an extra back space key. And I move caps lock to Shift + Back space. In this post I explain how it is configured.*
 
@@ -55,7 +55,20 @@ This script has to be run when your window manager starts up. For i3, add the fo
 exec xmodmap ~/.Xmodmap
 ```
 
+You can get a full list of all active keybindings with `xmodmap` too:
+```console
+$ xmodmap -pk   # Full list with hexadecimal codes
+$ xmodmap -pke  # Shows the same mapping, but in the expression format
+$ xmodmap -e "keycode 115 = Escape"  # Remap 115 to Escape for this session
+```
+
 ## Additional commands
+
+### Key events
+Use the `xev` tool to check what key event is bound to a given key:
+```console
+$ xev -event keyboard
+```
 
 ### Gnome Tweak tool
 If you use Gnome, the Gnome tweak tool allows you to do configurations that you won't find in the standard settings.
