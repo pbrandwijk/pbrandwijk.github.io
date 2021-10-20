@@ -53,6 +53,10 @@ plugins:
  - jekyll-tidy
  - jekyll-feed
 
+# Set KaTex as the math engine for Kramdown
+kramdown:
+  math_engine: katex
+
 # Add the collection definition for projects and articles
 collections:
   projects:
