@@ -27,6 +27,20 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 
+  {% if page.mathjax %}
+  <!-- Mathjax - Math display engine -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  {% endif %}
+
   <!-- Tracker -->
   {% include tracker.html %}
 </head>
