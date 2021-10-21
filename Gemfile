@@ -32,3 +32,5 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "jekyll-tidy", "~> 0.2.2"
 
 gem "kramdown-math-katex", "~> 1.0"
+
+gem "jekyll-gist", "~> 1.5"

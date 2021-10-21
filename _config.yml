@@ -52,6 +52,7 @@ markdown: kramdown
 plugins: 
  - jekyll-tidy
  - jekyll-feed
+ - jekyll-gist
 
 # Set KaTex as the math engine for Kramdown
 kramdown:
@@ -61,6 +62,10 @@ kramdown:
 collections:
   projects:
     output: true
+
+# Allow jekyll-gist to fetch the gist contents in case the client doesn't use JS
+gist:
+  noscript: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
