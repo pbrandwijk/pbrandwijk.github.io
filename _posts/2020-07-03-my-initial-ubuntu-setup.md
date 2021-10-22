@@ -35,7 +35,7 @@ Be aware that if there are any issues with loading the background you will get a
 ## Utilities
 Install all the below utilities via `apt`:
 ```console
-$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar httpie seahorse calcurse htop qalc
+$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar httpie seahorse calcurse htop qalc peek
 ```
 
 If you want to allow ssh connections, also install openssh-server:
