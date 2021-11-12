@@ -20,7 +20,7 @@ $ sudo chown $(logname):$(logname) /tmp/gpg
 In the example above, a chunk of 1MB of RAM is mounted to `/tmp/gpg`. Anything written to this directory will only persist as long as RAM is active.
 
 ## Example usage: exporting a private GPG key
-Here I give an example of using the mounted RAM to export a GPG private key. The benefit of using a RAM mount is that we can be sure that no trace of the private key will linger around in memory after removing the mount. On a hard drive, even though you delete a file, the actual bytes may still be present, which in this case exposes your private GPG key to expoits.
+Here I give an example of using the mounted RAM to export a GPG private key. The benefit of using a RAM mount is that we can be sure that no trace of the private key will linger around in memory after removing the mount. On a hard drive, even though you delete a file, the actual bytes may still be present, which in this case exposes your private GPG key to exploits.
 
 Export the private key for `username@domain.com` to `/tmp/gpg/subkeys`:
 ```console
