@@ -21,4 +21,10 @@ If 0.2 times the effort gives 0.8 times the result, then 0.2 times 0.2 times the
 \\[(0.2^2 = 4\%) \mapsto (0.8^2 = 64\%)\\]
 \\[(0.2^3 \approx 1\%) \mapsto (0.8^3 \approx 50\%)\\]
 
-This shows that if you apply the Pareto principle three times, then 1% of effort gives about 50% of the results. In other words, with a tiny action, I can literally come half way. Not bad!
+This shows that if you apply the Pareto principle three times, then 1% of effort gives about 50% of the results. In other words, with a tiny action, I can literally come half way. Not bad! The trick is of course, to find out what action that is.
+
+Bonus: what happens when you invert the above relation? That is, instead of applying the 20% rule to itself, meaning we square it (\\(20\% * 20\% = 0.2^2 = 4\%\\)), we invert it by taking the square root instead. This gives \\((0.2^\frac{1}{2} \approx 45\%) \mapsto (0.8^\frac{1}{2} \approx 90\%)\\), meaning 45% of effort gives you about 90% of results. Notice that by adding 25 Percentage Points of effort, you only gain 10 Percentage Points of results.
+
+<!--
+{% gist 04a9fff84e281a7024b2f7cdb2ec2211 Pareto.hs %}
+-->
