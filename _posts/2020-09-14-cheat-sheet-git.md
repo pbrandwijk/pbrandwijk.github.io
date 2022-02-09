@@ -51,9 +51,15 @@ $ git push origin -u <new name> # Reset upstream branch
 
 ## Stashing
 ```console
+$ git stash list                # List all available stashes
 $ git stash                     # Stash all changes to versioned files
-$ git stash apply               # Apply the last added stash to the current branch
-$ git stash drop                # Drop (delete) the last added stash
+$ git stash push -m "<name>"    # Store a named stash
+$ git stash apply               # Apply the last added stash to the current branch (keeps the stash)
+$ git stash apply --index       # Same as above, but also differentiate between staged and unstaged 
+$ git stash pop                 # Same as apply, but removes the stash from the stack
+$ git stash drop                # Drop (delete) the last added stash without applying
+$ git stash apply <name>        # Apply a named stash
+$ git stash apply stash@{n}     # Apply stash number n (latest is 0)
 ```
 
 ## Correcting
