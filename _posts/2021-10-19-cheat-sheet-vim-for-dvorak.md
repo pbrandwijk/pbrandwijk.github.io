@@ -27,8 +27,13 @@ tags:
 | <kbd><strong>?</strong></kbd> | Backward search |
 | <kbd><strong>l</strong></kbd> | Next search match |
 | <kbd><strong>L</strong></kbd> | Previous search match |
+| <kbd><strong>k</strong></kbd> | Substitute the current character |
 | <kbd><strong>gg</strong></kbd> | Start of file |
 | <kbd><strong>G</strong></kbd> | End of file |
+| <kbd><strong>{</strong></kbd> | Go to beginning of paragraph |
+| <kbd><strong>}</strong></kbd> | Go to end of paragraph |
+| <kbd><strong>%</strong></kbd> | Go to the matching pair of () [] or {} |
+| <kbd><strong>50%</strong></kbd> | Go to 50% of the file |
 | <kbd><strong>Num-G</strong></kbd> | Go to line number |
 | <kbd><strong>Ctrl+o</strong></kbd> | Previous cursor position |
 | <kbd><strong>Ctrl+i</strong></kbd> | Next cursor position |
@@ -57,6 +62,7 @@ tags:
 * `:wq`, `:x` write (save) and quit
 * `:q` quit (fails if there are unsaved changes)
 * `:q!` quit and throw away unsaved changes
+* `:h <command>` show help for given command/key
 
 ## Dvorak remap
 
