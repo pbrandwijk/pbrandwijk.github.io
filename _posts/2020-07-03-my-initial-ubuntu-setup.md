@@ -10,6 +10,8 @@ tags:
 ## Preliminaries
 I'm using Ubuntu 20.04 as my OS on an HP Pavilion laptop with an NVIDIA GeForce GTX 1050 graphics card. I'm assuming in this post that the installation was successful, and the system is operating as it should be.
 
+*Post updated on 2022-08-28 to Ubuntu 22.04. Note that in this Ubuntu version, the steps to remove the tracker has changed somewhat.*
+
 ## Firewall
 The Uncomplicated Firewall `ufw` comes preinstalled, but is turned off by default. My configuration:
 ```console
@@ -18,6 +20,13 @@ $ sudo ufw allow ssh/tcp    # Allow connections over ssh
 $ sudo ufw logging on       # Enable logging
 $ sudo ufw enable           # Turn on ufw
 $ sudo ufw status           # Print the status and active rules
+```
+
+# Language support
+I usually install the distro with English as base language, and then add the additional languages I need.
+```console
+$ check-language-support -l nl   # Check what packages need to be installed
+$ sudo apt install <packages from the previous command>
 ```
 
 ## i3
@@ -35,7 +44,34 @@ Be aware that if there are any issues with loading the background you will get a
 ## Utilities
 Install all the below utilities via `apt`:
 ```console
-$ sudo apt install git curl vim zsh tmux pass gnuplot mc feh rxvt-unicode gnome-tweaks p7zip-full p7zip-rar httpie seahorse calcurse htop qalc peek guvcview
+$ sudo apt install git \
+                   curl \
+                   vim \
+                   zsh \
+                   tmux \
+                   pass \
+                   gnuplot \
+                   mc \
+                   feh \
+                   rxvt-unicode \
+                   gnome-tweaks \
+                   p7zip-full \
+                   p7zip-rar \
+                   httpie \
+                   seahorse \
+                   calcurse \
+                   htop \
+                   qalc \
+                   timeshift \
+                   mpv \
+                   abook \
+                   mupdf mupdf-tools \
+                   entr \
+                   gawk \
+                   diffstat \
+                   guvcview \
+                   peek \
+                   filezilla
 ```
 
 If you want to allow ssh connections, also install openssh-server:
@@ -59,7 +95,7 @@ You will be asked if you want to make `zsh` your default shell. Pick Yes.
 I prefer installing `jekyll` via `gem`, than via `apt`, as that gives a more recent version. Make sure that you have the `RUBY_HOME` environment variable set and that `RUBY_HOME/bin` is on your `PATH`:
 ```console
 $ sudo apt install ruby-full build-essential zlib1g-dev
-$ gem install jekyll jekyll-tidy jekyll-feed bundler
+$ gem install jekyll jekyll-tidy jekyll-feed jekyll-gist bundler
 ```
 
 For `gem`, make sure you have `~/.gemrc` set up with at least the following settings:
@@ -69,6 +105,16 @@ For `gem`, make sure you have `~/.gemrc` set up with at least the following sett
 install: --user-install
 ```
 
+Since the upgrade to Ruby 3.0.0 the gem home directory does not seem to get picked up any more, so I run the `bundle` command with the explicit path:
+```console
+$ ~/.local/share/gem/ruby/3.0.0/bin/bundle exec jekyll serve
+```
+
+Also there may be an unresolved issue with the package Webrick being missing. If you get that, you need to install it manually:
+```console
+$ bundle add webrick
+```
+
 ## Ledger
 Ledger CLI and hledger are great tools to manage your accounting needs. Make sure that you have the `LEDGER_FILE`, `LEDGER_INIT` and `LEDGER_PRICE_DB` environment variables set up:
 ```console
@@ -76,10 +122,12 @@ $ sudo apt install ledger hledger
 ```
 
 ## Docker
+I install Docker via Snap, rather than via apt, so I get a more up to date version. For the most up to date version, see the instructions on the [Docker website](https://docs.docker.com/engine/install/ubuntu/).
 ```console
 $ sudo snap install docker
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
+$ sudo docker run hello-world # Test the installation
 ```
 
 ## Java
@@ -89,6 +137,7 @@ $ sudo apt install default-jdk -y
 ```
 
 ## IntelliJ
+In case you prefer the installation via snap over the installation via flatpak.
 ```console
 $ sudo snap install intellij-idea-ultimate --classic
 ```
@@ -104,13 +153,7 @@ As one of my favorite languages, I also make sure to have Haskell ready. The eas
 ```console
 $ sudo apt install haskell-platform
 ```
-For a more scalable solution, have a look at [stack][stack].
-
-## Visual Studio Codium
-The open soure (and tracker free) version of VS Code.
-```console
-$ snap install codium
-```
+For a more scalable solution, have a look at [stack][stack], or the newer [ghcup][ghcup].
 
 ## Flatpak
 Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
@@ -122,11 +165,18 @@ $ flatpak install flathub org.gimp.GIMP
 $ flatpak install flathub org.audacityteam.Audacity
 $ flatpak install flathub com.obsproject.Studio
 $ flatpak install flathub com.calibre_ebook.calibre
+$ flatpak install flathub com.github.xournalpp.xournalpp
+$ flatpak install flathub org.chromium.Chromium
+$ flatpak install flathub org.keepassxc.KeePassXC
+$ flatpak install flathub org.inkscape.Inkscape
+$ flatpak install flathub com.github.xournalpp.xournalpp
 $ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community  # Gives problems due to file system restrictions, better install via snap
 $ flatpak install flathub com.github.tchx84.Flatseal             # Manage permissions of Flatpak apps
 ```
 
 For IntelliJ, you may need to add a permission to access the JDK on your system. I did this by adding `/usr/lib/jvm` to the file permissions via Flatseal.
+
+All user cache files of installed apps are stored in `~/.var/app`. Flatpak itself and the apps are installed in `/var/lib/flatpak` and the user config is installed in `~/.local/share/flatpak`.
 
 ## VPN
 Download the `.ovpn` files from your VPN provider for the connections that you want to add. Import them and set up the user name and password as described in [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}).
@@ -147,14 +197,22 @@ else
 fi
 ```
 
+## GSConnect to connect with Android phone
+This assumes that you have KDE Connect installed on your Android phone and it is connected in the same network. You need to install the Gnome extension manager, and from within the manager install the `gsconnect` extension. Make sure that your firewall allows the connection on port 1716. When the device is detected you can pair them.
+```console
+$ sudo ufw allow 1716
+$ sudo apt install gnome-shell-extension-manager
+```
+
+
 ## Disable tracker
 Ubuntu by default has the `tracker` service enabled, which indexes files on your hard drive to make them easily searchable. However, in my experience this process often takes up 100% of the CPU. Also I don't really need this function, so I disable it.
 ```console
-$ gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
-$ gsettings set org.freedesktop.Tracker.Miner.Files ignored-files "['*']"
-$ gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
-$ sudo pkill tracker
-$ rm -rf ~/.cache/tracker
+$ gsettings set org.freedesktop.Tracker3.Miner.Files enable-monitors false
+$ gsettings set org.freedesktop.Tracker3.Miner.Files ignored-files "['*']"
+$ gsettings set org.freedesktop.Tracker3.Miner.Files crawling-interval -2
+$ sudo pkill tracker-miner-f
+$ rm -rf ~/.cache/tracker*
 $ rm -rf ~/.local/share/tracker
 ```
 
@@ -162,3 +220,4 @@ $ rm -rf ~/.local/share/tracker
 - [The Haskell Tool Stack][stack]
 
 [stack]: https://docs.haskellstack.org/en/stable/README/
+[ghcup]: https://www.haskell.org/ghcup/
