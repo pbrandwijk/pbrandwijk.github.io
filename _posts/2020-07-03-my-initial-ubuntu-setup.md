@@ -91,6 +91,13 @@ $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/instal
 ```
 You will be asked if you want to make `zsh` your default shell. Pick Yes.
 
+# ssh-agent
+If there are any certificates in your `~/.ssh` folder that you use to authenticate yourself, these will need to be added to the `ssh-agent`:
+```console
+$ ssh-add ~/.ssh/<id>_ed25519
+```
+You may need the password for the certificate.
+
 ## Jekyll
 I prefer installing `jekyll` via `gem`, than via `apt`, as that gives a more recent version. Make sure that you have the `RUBY_HOME` environment variable set and that `RUBY_HOME/bin` is on your `PATH`:
 ```console
