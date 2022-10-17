@@ -33,7 +33,7 @@ This is all you need for a functioning lambda calculus. For the sake of readabil
 All of these terms are implemented natively in a functional programming language like Haskell. We will now use that implementation and see if we can make some interesting programs with it.
 
 ## JavaScript representation
-We will use JavaScript as a reference implementation, since it is an untyped language with native support for the λ-calculus. The benefit of JavaScript being untyped is that as our functions become more complex, we do not run into trouble with the automatic type interference system of for example Haskell. 
+We will use JavaScript as a reference implementation, since it is an untyped language with native support for the λ-calculus. The benefit of JavaScript being untyped is that as our functions become more complex, we do not run into trouble with the automatic type interference system, like we would in a language like Haskell. 
 
 This implementation draws heavily from other sources[<sup>[2]</sup>][computerphile] [<sup>[3]</sup>][klipse] [<sup>[5]</sup>][iitk], but has been ported to JavaScript. The syntax is somewhat different from the mathematical notation, which is shown here:
 ```javascript
@@ -133,7 +133,7 @@ And now the statement of Renart:
 \\[s2 = \lambda h. \lambda r. h \land r\\]
 
 Notice that we can say that if Hubard is a knight, then \\(s1\\) must be `true`. If he is not a knight, then \\(\neg s1\\) must be `true`. The same goes for Renart and \\(s2\\). So now we can formulate the whole puzzle in the following way:
-\\[check = \lambda h. \lambda r. (bif \thickspace (h) \thickspace (s1 \thickspace r) \thickspace (\neg (s1 r))) \land (bif \thickspace (r) \thickspace (s2 \thickspace h \thickspace r) \thickspace (\neg (s2 \thickspace h \thickspace r)))\\]
+\\[check = \lambda h. \lambda r. (bif \thickspace (h) \thickspace (s1 \thickspace r) \thickspace (\neg (s1 \thickspace r))) \land (bif \thickspace (r) \thickspace (s2 \thickspace h \thickspace r) \thickspace (\neg (s2 \thickspace h \thickspace r)))\\]
 
 This way, any assignment of `true` or `false` to `h` and `r` that makes `check` evaluate to `true`, is a solution to the puzzle. Let's put it into code:
 ```javascript
