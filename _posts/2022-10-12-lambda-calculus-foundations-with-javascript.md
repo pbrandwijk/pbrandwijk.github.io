@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    λ-calculus - Foundations with JavaScript
-date:     2022-10-11 21:00:00 +0200
+date:     2022-10-12 21:00:00 +0200
 katex:    true
 tags: 
  - Lambda calculus
