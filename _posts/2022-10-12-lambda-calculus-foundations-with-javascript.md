@@ -33,7 +33,9 @@ This is all you need for a functioning lambda calculus. For the sake of readabil
 All of these terms are implemented natively in a functional programming language like Haskell. We will now use that implementation and see if we can make some interesting programs with it.
 
 ## JavaScript representation
-We will use JavaScript as a reference implementation, since it is an untyped language with native support for the λ-calculus. This implementation draws heavily from other sources[<sup>[2]</sup>][computerphile] [<sup>[3]</sup>][klipse] [<sup>[5]</sup>][iitk], but has been ported to JavaScript. The syntax is a different from the mathematical notation, which is shown here:
+We will use JavaScript as a reference implementation, since it is an untyped language with native support for the λ-calculus. The benefit of JavaScript being untyped is that as our functions become more complex, we do not run into trouble with the automatic type interference system of for example Haskell. 
+
+This implementation draws heavily from other sources[<sup>[2]</sup>][computerphile] [<sup>[3]</sup>][klipse] [<sup>[5]</sup>][iitk], but has been ported to JavaScript. The syntax is somewhat different from the mathematical notation, which is shown here:
 ```javascript
 x                          // variable
 function(x) { return m; }  // function definition
