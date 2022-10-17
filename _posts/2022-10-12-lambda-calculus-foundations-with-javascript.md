@@ -59,7 +59,7 @@ We use `btrue` and `bfalse` as function names instead of `true` and `false` to a
 ```
 Here, `1` represents `true` and `0` represents `false`. I encourage you to experiment with this for yourself in the `nodejs` REPL.
 
-Ne will now implement some Boolean operators using the [truth tables](#truth-tables).
+We will now implement some Boolean operators using the [truth tables](#truth-tables).
 
 ### Not-operator
 Now that we have defined `true` and `false`, are we able to define an operator for them using the Boolean [truth tables](#truth-tables)? We will start with the not-operator (\\(\neg\\)), since it takes just a single argument. Consider the following implementation:
