@@ -149,7 +149,7 @@ let solvePuzzle = function() {
   console.log(bif(check(btrue)(btrue))("Knight(H) and Knight(R)")(""));
 }
 ```
-Running `solvePuzzle` in `nodejs` will print the solution to the puzzle.
+Running `solvePuzzle();` in `nodejs` will print the solution to the puzzle.
 
 ## Complete script
 <script src="https://gist.github.com/pbrandwijk/a11b074e71c11b00ea605c78d6ad38a3.js?file=Lambda.js"></script>
