@@ -8,7 +8,7 @@ tags:
  - JavaScript
  - Functional programming
 ---
-*We explore the very core of lambda calculus using the JavaScript language. We build up propositional logic from scratch.*
+*We explore the very core of lambda calculus using the JavaScript language. We build up propositional logic from scratch and use it to solve a logic puzzle.*
 
 ## Preparation
 We will use an interactive REPL environment called `nodejs`. If you don't have that installed yet on your system, you can set up your system following the instructions [here](https://nodejs.org/en/). After installation you can open a terminal and start `nodejs`. If you want to load the file with the definitions [of this post](#complete-script), download the file `Lambda.js` to a folder and start `nodejs` from within that folder. Then use the `.load Lambda.js` command:
@@ -118,14 +118,15 @@ Running `test();` in `nodejs` will give you a nicely formatted truth table.
 ## Knights and knaves
 Now let's move on to some really cool stuff. Let's use our Boolean logic interpreter to solve some puzzles. Knights and knaves is a good starting point.[<sup>[6]</sup>][hku]
 
-There is an island where all inhabitants are either a knight or a knave. The knights always tell the truth, the knaves always lie. The puzzle is to determine who is knight and who is knave, based on what the inhabitants say. Let's have a go.
+There is an island where each inhabitant is either a knight or a knave. The knights always tell the truth, the knaves always lie. The puzzle is to determine who is knight and who is knave, based on what the inhabitants say. Let's have a go.
 
 Hubard says: "**Renart is knave**". Renart says: "**Neither of us is a knight**".
 
-To solve this puzzle, first we need to formulate it in terms that we can express in our Boolean language. We model variable `h` to express if Hubard is a knight. So when `h` is `true`, then Hubard is a knight. When `h` is `false`, then Hubard is a knave. We do the same for Renart, using variable `r`.
+To solve this puzzle, first we need to formulate it in terms that we can express in our Boolean language. We model variable `h` to express that Hubard is a knight. So when `h` is `true`, then Hubard is a knight. When `h` is `false`, then Hubard is a knave. We do the same for Renart, using variable `r`.
 
 Now we model the statements that both made. Look at this formulation of the statement of Hubard:
 \\[s1 = \lambda r. \neg r\\]
+
 And now the statement of Renart:
 \\[s2 = \lambda h. \lambda r. h \land r\\]
 
