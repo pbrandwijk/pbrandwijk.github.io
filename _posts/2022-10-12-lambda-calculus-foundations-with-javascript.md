@@ -130,7 +130,7 @@ Now let's move on to some really cool stuff. Let's use our Boolean logic interpr
 
 There is an island where each inhabitant is either a knight or a knave. The knights always tell the truth, the knaves always lie. The puzzle is to determine who is knight and who is knave, based on what the inhabitants say. Let's have a go.
 
-Hubard says: "**Renart is knave**". Renart says: "**Neither of us is a knight**".
+Hubard says: "**Renart is a knave**". Renart says: "**Neither of us is a knight**".
 
 To solve this puzzle, first we need to formulate it in terms that we can express in our Boolean language. We model variable `h` to express that Hubard is a knight. So when `h` is `true`, then Hubard is a knight (\\(Knight(H)\\)). When `h` is `false`, then Hubard is a knave (\\(Knave(H)\\)). We do the same for Renart, using variable `r`.
 
