@@ -7,6 +7,7 @@ tags:
  - Lambda calculus
  - JavaScript
  - Functional programming
+ - node.js
 ---
 *We explore the very core of lambda calculus using the JavaScript language. We build up propositional logic from scratch and use it to solve a logic puzzle.*
 
@@ -84,7 +85,7 @@ let bor = a => b => a(btrue)(b);
 ```
 
 ## Conditional expression
-We can also use the lambda-calculus to define a conditional expression. It looks like this:
+We can also use the lambda calculus to define a conditional expression. It looks like this:
 \\[bif = \lambda c.\lambda a.\lambda b.c \thickspace a \thickspace b\\]
 ```javascript
 let bif = c => a => b => c(a)(b);
@@ -131,7 +132,7 @@ There is an island where each inhabitant is either a knight or a knave. The knig
 
 Hubard says: "**Renart is knave**". Renart says: "**Neither of us is a knight**".
 
-To solve this puzzle, first we need to formulate it in terms that we can express in our Boolean language. We model variable `h` to express that Hubard is a knight. So when `h` is `true`, then Hubard is a knight. When `h` is `false`, then Hubard is a knave. We do the same for Renart, using variable `r`.
+To solve this puzzle, first we need to formulate it in terms that we can express in our Boolean language. We model variable `h` to express that Hubard is a knight. So when `h` is `true`, then Hubard is a knight (\\(Knight(H)\\)). When `h` is `false`, then Hubard is a knave (\\(Knave(H)\\)). We do the same for Renart, using variable `r`.
 
 Now we model the statements that both made. Look at this formulation of the statement of Hubard:
 \\[s1 = \lambda r. \neg r\\]
