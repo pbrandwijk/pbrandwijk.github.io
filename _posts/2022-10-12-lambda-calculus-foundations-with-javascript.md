@@ -61,10 +61,8 @@ We use `btrue` and `bfalse` as function names instead of `true` and `false` to a
 ```
 Here, `1` represents `true` and `0` represents `false`. I encourage you to experiment with this for yourself in the `nodejs` REPL.
 
-We will now implement some Boolean operators using the [truth tables](#truth-tables).
-
 ### Not-operator
-Now that we have defined `true` and `false`, are we able to define an operator for them using the Boolean [truth tables](#truth-tables)? We will start with the not-operator (\\(\neg\\)), since it takes just a single argument. Consider the following implementation:
+Now that we have defined `true` and `false`, are we able to define an operator for them? We will start with the not-operator (\\(\neg\\)), since it takes just a single argument. Consider the following implementation:
 \\[bnot = \lambda a.a \thickspace F \thickspace T\\]
 ```javascript
 let bnot = a => a(bfalse)(btrue);
@@ -115,7 +113,16 @@ let test = function() {
   console.log(line(btrue)(btrue)); 
 }
 ```
-Running `test();` in `nodejs` will give you a nicely formatted truth table.
+Running `test();` in `nodejs` will give you a nicely formatted truth table:
+```javascript
+> test();
+| a | b | not a | a and b | a or b | a implies b |
+|:-:|:-:|:-----:|:-------:|:------:|:-----------:|
+| 0 | 0 |   1   |    0    |   0    |      1      |
+| 0 | 1 |   1   |    0    |   1    |      1      |
+| 1 | 0 |   0   |    0    |   1    |      0      |
+| 1 | 1 |   0   |    1    |   1    |      1      |
+```
 
 ## Knights and knaves
 Now let's move on to some really cool stuff. Let's use our Boolean logic interpreter to solve some puzzles. Knights and knaves is a good starting point.[<sup>[6]</sup>][hku]
@@ -130,7 +137,7 @@ Now we model the statements that both made. Look at this formulation of the stat
 \\[s1 = \lambda r. \neg r\\]
 
 And now the statement of Renart:
-\\[s2 = \lambda h. \lambda r. h \land r\\]
+\\[s2 = \lambda h. \lambda r. \neg h \land \neg r\\]
 
 Notice that we can say that if Hubard is a knight, then \\(s1\\) must be `true`. If he is not a knight, then \\(\neg s1\\) must be `true`. The same goes for Renart and \\(s2\\). So now we can formulate the whole puzzle in the following way:
 \\[check = \lambda h. \lambda r. (bif \thickspace (h) \thickspace (s1 \thickspace r) \thickspace (\neg (s1 \thickspace r))) \land (bif \thickspace (r) \thickspace (s2 \thickspace h \thickspace r) \thickspace (\neg (s2 \thickspace h \thickspace r)))\\]
@@ -138,7 +145,7 @@ Notice that we can say that if Hubard is a knight, then \\(s1\\) must be `true`.
 This way, any assignment of `true` or `false` to `h` and `r` that makes `check` evaluate to `true`, is a solution to the puzzle. Let's put it into code:
 ```javascript
 let s1 = r => bnot(r);
-let s2 = h => r => band(h)(r);
+let s2 = h => r => band(bnot(h))(bnot(r));
 
 let check = a => b => band(bif(a)(s1(b))(bnot(s1(b))))(bif(b)(s2(a)(b))(bnot(s2(a)(b))));
 
@@ -149,29 +156,18 @@ let solvePuzzle = function() {
   console.log(bif(check(btrue)(btrue))("Knight(H) and Knight(R)")(""));
 }
 ```
-Running `solvePuzzle();` in `nodejs` will print the solution to the puzzle.
+Running `solvePuzzle();` in `nodejs` will print the solution to the puzzle:
+```javascript
+> solvePuzzle();
+
+
+Knight(H) and Knave(R)
+
+```
+This concludes our crash course in λ-calculus. Feel free to experiment with the concepts that we have developed. Try for example to solve [some other][hku] knights and knaves puzzles.
 
 ## Complete script
 <script src="https://gist.github.com/pbrandwijk/a11b074e71c11b00ea605c78d6ad38a3.js?file=Lambda.js"></script>
-
-## Truth tables
-This section serves as a reference for the expected behavior of the Boolean operators that we have defined.
-
-Truth table for the unary `not` operator:
-
-| \\(A\\) | \\(\neg A\\) |
-| :---: | :---: |
-| 0 | 1 |
-| 1 | 0 |
-
-Truth table for the binary operators `and`, `or` and `implies`:
-
-| \\(A\\) | \\(B\\) | \\(A \land B\\) | \\(A \lor B\\) | \\(A \implies B\\) |
-| :---: | :---: | :---: | :---: | :---: |
-| 0 | 0 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 1 | 1 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ## Resources
 - [[1] Lambda calculus - Wikipedia][wiki1]
