@@ -100,17 +100,17 @@ This gives us quite some room to experiment with. As an exercise though, I encou
 ## Testing
 Of course we want to check that operators function correctly. For this we have to move a little bit outside of the purely functional lambda calculus, as we need some JavaScript expressions to print to the console:
 ```javascript
-let line = a => b => "| " + a(1)(0) + " | " + b(1)(0) + " |  " 
-           + bnot(a)(1)(0) + "  |  " + band(a)(b)(1)(0) + "  | " 
-           + bor(a)(b)(1)(0) + "  |    " + bimplies(a)(b)(1)(0) + "    |";
+let line = a => b => "| " + a(1)(0) + " | " + b(1)(0) + " |   " 
+           + bnot(a)(1)(0) + "   |    " + band(a)(b)(1)(0) + "    |   " 
+           + bor(a)(b)(1)(0) + "    |      " + bimplies(a)(b)(1)(0) + "      |";
 
 let test = function() { 
-  console.log("| A | B | not | and | or | implies |");
-  console.log("|:-:|:-:|:---:|:---:|:--:|:-------:|");
+  console.log("| a | b | not a | a and b | a or b | a implies b |");
+  console.log("|:-:|:-:|:-----:|:-------:|:------:|:-----------:|");
   console.log(line(bfalse)(bfalse));
   console.log(line(bfalse)(btrue));
   console.log(line(btrue)(bfalse));
-  console.log(line(btrue)(btrue)); 
+  console.log(line(btrue)(btrue));
 }
 ```
 Running `test();` in `nodejs` will give you a nicely formatted truth table:
