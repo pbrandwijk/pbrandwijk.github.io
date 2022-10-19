@@ -23,7 +23,7 @@ Type ".help" for more information.
 ```
 
 ## Lambda calculus
-In its simplest form, we can define the lambda calculus with the following terms[<sup>[1]</sup>][wiki1]:
+In its simplest form, we can define the lambda calculus (or λ-calculus) with the following terms[<sup>[1]</sup>][wiki1]:
 - \\(x\\) - Variable. Can be any lambda expression.
 - (\\(\lambda x.M\\)) - Function definition. \\(x\\) is bound in expression \\(M\\).
 - (\\(M \thickspace N\\)) - Function application. Apply function \\(M\\) to argument \\(N\\).
@@ -36,7 +36,7 @@ All of these terms are implemented in programming languages that support lambda 
 ## JavaScript representation
 In this post we will build our lambdas in JavaScript, since it is a dynamically typed language and the latest versions of it provide a syntax for λ-expressions that stays quite close to the mathematical notation. The benefit of JavaScript being dynamically typed is that as our functions become more complex, we do not run into trouble with the automatic type inference system, like we would in a language like Haskell. 
 
-This implementation draws heavily from other sources[<sup>[2]</sup>][computerphile] [<sup>[3]</sup>][klipse] [<sup>[5]</sup>][iitk], but has been ported to JavaScript. The syntax is somewhat different from the mathematical notation, which is shown here:
+This implementation draws heavily from other sources[<sup>[2]</sup>][computerphile] [<sup>[3]</sup>][klipse] [<sup>[5]</sup>][iitk], but has been ported to JavaScript. This it the syntax used in JavaScript to express the terms of the λ-calculus:
 ```javascript
 x                          // variable
 function(x) { return m; }  // function definition
@@ -46,14 +46,14 @@ let x = m;                 // variable assignment
 ```
 
 ## Boolean logic
-So can we use our fresh JavaScript implementation of the lambda calculus to represent a basic data structure like Boolean logic? What would this look like? Suppose we define the Boolean terms `true` and `false` as follows[<sup>[3]</sup>][klipse] [<sup>[4]</sup>][rojas]:
+So can we use our fresh JavaScript implementation of the lambda calculus to represent a basic data type like Booleans? What would this look like? Suppose we define the Boolean values `true` and `false` as follows[<sup>[3]</sup>][klipse] [<sup>[4]</sup>][rojas]:
 \\[btrue = \lambda a.\lambda b.a\\]
 \\[bfalse = \lambda a.\lambda b.b\\]
 ```javascript
 let btrue = a => b => a;
 let bfalse = a => b => b;
 ```
-We use `btrue` and `bfalse` as function names instead of `true` and `false` to avoid conflicts with existing function definitions in the standard library of JavaScript. Notice that `btrue` and `bfalse` are defined as functions. So if some Boolean expression gives back a value, there is actually nothing for us to "see". But at some point we want to see the outcome of a calculation, so to do that we apply the following trick when executing the code in a REPL:
+We use `btrue` and `bfalse` as function names instead of `true` and `false` to avoid conflicts with existing function definitions in the standard library of JavaScript. Notice that `btrue` and `bfalse` are defined as functions. So if some Boolean expression gives back either of them as a value, there is actually nothing for us to "see". But at some point we want to see the outcome of a calculation, so to do that we apply the following trick when executing the code in a REPL:
 ```javascript
 > btrue(1)(0);
 1
