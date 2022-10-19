@@ -12,7 +12,7 @@ tags:
 *We explore the very core of lambda calculus using the JavaScript language. We build up propositional logic from scratch and use it to solve a logic puzzle.*
 
 ## Preparation
-We will use an interactive REPL environment called `nodejs`. If you don't have that installed yet on your system, you can set up your system following the instructions [here](https://nodejs.org/en/). After installation you can open a terminal and start `nodejs`. If you want to load the file with the definitions [of this post](#complete-script), download the file `Lambda.js` to a folder and start `nodejs` from within that folder. Then use the `.load Lambda.js` command:
+We will use an interactive REPL (*Read-eval-print loop*) environment called `nodejs`. If you don't have that installed yet on your system, you can set up your system following the instructions [here](https://nodejs.org/en/). After installation you can open a terminal and start `nodejs`. If you want to load the file with the definitions [of this post](#complete-script), download the file `Lambda.js` to a folder and start `nodejs` from within that folder. Then use the `.load Lambda.js` command:
 ```console
 $ ls
 Lambda.js
