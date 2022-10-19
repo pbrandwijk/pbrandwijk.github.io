@@ -99,7 +99,7 @@ let bimplies = a => b => bif(band(a)(bnot(b)))(bfalse)(btrue);
 This gives us quite some room to experiment with. As an exercise though, I encourage you to try for yourself and build some [other Boolean operators](https://en.wikipedia.org/wiki/Boolean_algebra#Secondary_operations).
 
 ## Testing
-Of course we want to check that operators function correctly. For this we have to move a little bit outside of the purely functional lambda calculus, as we need some JavaScript expressions to print to the console:
+Of course we want to check that our operators function correctly. For this we have to move a little bit outside of the purely functional lambda calculus, as we need some JavaScript statements to print to the console:
 ```javascript
 let line = a => b => "| " + a(1)(0) + " | " + b(1)(0) + " |   " 
            + bnot(a)(1)(0) + "   |    " + band(a)(b)(1)(0) + "    |   " 
