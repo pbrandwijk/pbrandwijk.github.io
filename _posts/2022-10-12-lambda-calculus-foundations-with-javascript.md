@@ -165,7 +165,7 @@ Running `solvePuzzle();` in `nodejs` will print the solution to the puzzle:
 Knight(H) and Knave(R)
 
 ```
-This concludes our crash course in λ-calculus. Feel free to experiment with the concepts that we have developed. Try for example to solve [some other][hku] knights and knaves puzzles.
+This concludes our crash course in λ-calculus. Feel free to experiment with the concepts that we have developed. Try for example to solve [some other][hku] knights and knaves puzzles. Or try to port the code to a language of your preference. This will help you a lot to digest the concepts presented in this post.
 
 ## Complete script
 <script src="https://gist.github.com/pbrandwijk/a11b074e71c11b00ea605c78d6ad38a3.js?file=Lambda.js"></script>
