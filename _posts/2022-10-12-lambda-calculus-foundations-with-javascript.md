@@ -4,7 +4,7 @@ title:    λ-calculus - Foundations with JavaScript
 date:     2022-10-12 21:00:00 +0200
 katex:    true
 tags: 
- - λ-calculus
+ - lambda calculus
  - JavaScript
  - functional programming
  - node.js
