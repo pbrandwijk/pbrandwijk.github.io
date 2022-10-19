@@ -25,16 +25,16 @@ Type ".help" for more information.
 ## Lambda calculus
 In its simplest form, we can define the lambda calculus with the following terms[<sup>[1]</sup>][wiki1]:
 - \\(x\\) - Variable. Can be any lambda expression.
-- (\\(\lambda x.M\\)) - Function definition. \\(x\\) is bound in expression \\(M\\). \\(M\\) is another lambda expression.
+- (\\(\lambda x.M\\)) - Function definition. \\(x\\) is bound in expression \\(M\\).
 - (\\(M \thickspace N\\)) - Function application. Apply function \\(M\\) to argument \\(N\\).
 
 This is all you need for a functioning lambda calculus. For the sake of readability though, I will add another term so that we can name our lambda expressions and reference back to them.
 - \\(x = M\\) - variable assignment. \\(x\\) is substituted by \\(M\\) when used in an expression.
 
-All of these terms are implemented natively in a functional programming language like Haskell. We will now use that implementation and see if we can make some interesting programs with it.
+All of these terms are implemented in programming languages that support lambda expressions. Nowadays it's hard to find a language that doesn't support lambda expressions in one way or another. We will now use such an implementation and see if we can make some interesting programs with it.
 
 ## JavaScript representation
-We will use JavaScript as a reference implementation, since it is an untyped language with native support for the λ-calculus. The benefit of JavaScript being untyped is that as our functions become more complex, we do not run into trouble with the automatic type interference system, like we would in a language like Haskell. 
+In this post we will build our lambdas in JavaScript, since it is a dynamically typed language and the latest versions of it provide a syntax for λ-expressions that stays quite close to the mathematical notation. The benefit of JavaScript being dynamically typed is that as our functions become more complex, we do not run into trouble with the automatic type inference system, like we would in a language like Haskell. 
 
 This implementation draws heavily from other sources[<sup>[2]</sup>][computerphile] [<sup>[3]</sup>][klipse] [<sup>[5]</sup>][iitk], but has been ported to JavaScript. The syntax is somewhat different from the mathematical notation, which is shown here:
 ```javascript
