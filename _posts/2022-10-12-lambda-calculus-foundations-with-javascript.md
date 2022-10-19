@@ -4,9 +4,9 @@ title:    λ-calculus - Foundations with JavaScript
 date:     2022-10-12 21:00:00 +0200
 katex:    true
 tags: 
- - Lambda calculus
+ - λ-calculus
  - JavaScript
- - Functional programming
+ - functional programming
  - node.js
 ---
 *We explore the very core of lambda calculus using the JavaScript language. We build up propositional logic from scratch and use it to solve a logic puzzle.*
