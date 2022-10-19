@@ -3,7 +3,7 @@ layout:   post
 title:    "Removing diacritics from strings"
 date:     2021-10-15 21:00:00 +0200
 tags:
- - javascript
+ - JavaScript
  - strings
  - node.js
  - unicode
