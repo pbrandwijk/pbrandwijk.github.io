@@ -34,3 +34,5 @@ gem "jekyll-tidy", "~> 0.2.2"
 gem "kramdown-math-katex", "~> 1.0"
 
 gem "jekyll-gist", "~> 1.5"
+
+gem "webrick", "~> 1.7"
