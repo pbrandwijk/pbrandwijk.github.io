@@ -53,7 +53,7 @@ So can we use our fresh JavaScript implementation of the lambda calculus to repr
 let btrue = a => b => a;
 let bfalse = a => b => b;
 ```
-We use `btrue` and `bfalse` as function names instead of `true` and `false` to avoid conflicts with existing function definitions in the standard library of JavaScript. Notice that `btrue` and `bfalse` are defined as functions. So if some Boolean expression gives back either of them as a value, there is actually nothing for us to "see". But at some point we want to see the outcome of a calculation, so to do that we apply the following trick when executing the code in a REPL:
+We use `btrue` and `bfalse` as function names instead of `true` and `false` to avoid conflicts with existing definitions in the standard library of JavaScript. Notice that `btrue` and `bfalse` are defined as functions. So if some Boolean expression gives back either of them as a value, there is actually nothing for us to "see", since a function needs to be applied before a value can be calculated which can be shown on the terminal. But we want to know which Boolean was returned, so to do that we apply the following trick when executing the code in a REPL:
 ```javascript
 > btrue(1)(0);
 1
