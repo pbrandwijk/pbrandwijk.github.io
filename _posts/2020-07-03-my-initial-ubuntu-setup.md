@@ -146,6 +146,10 @@ $ sudo apt install default-jdk -y
 ## IntelliJ
 In case you prefer the installation via snap over the installation via flatpak.
 ```console
+$ sudo snap install intellij-idea-community --classic
+```
+Or use the ulitmate version if you have an active license.
+```console
 $ sudo snap install intellij-idea-ultimate --classic
 ```
 
@@ -179,6 +183,7 @@ $ flatpak install flathub org.inkscape.Inkscape
 $ flatpak install flathub com.github.xournalpp.xournalpp
 $ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community  # Gives problems due to file system restrictions, better install via snap
 $ flatpak install flathub com.github.tchx84.Flatseal             # Manage permissions of Flatpak apps
+$ flatpak install flathub net.cozic.joplin_desktop               # Notebook manager
 ```
 
 For IntelliJ, you may need to add a permission to access the JDK on your system. I did this by adding `/usr/lib/jvm` to the file permissions via Flatseal.
