@@ -28,11 +28,10 @@ $ git remote prune origin       # Delete all local branches that are not on orig
 ```
 
 ## Check merge
-Use this to check if merging a branch will give merge conflicts without actually performing the merge
 ```console
-$ git merge --no-commit --no-ff <branch>
+$ git merge --no-commit --no-ff <branch>  # Check if merging a branch will give merge conflicts without actually performing the merge
 $ echo $?                       # Check the error output from the last command
-$ git merge --abort
+$ git merge --abort             # Undo all changes after a merge conflict
 ```
 
 ## Branching
@@ -47,6 +46,17 @@ $ git branch -D <branch>        # Delete branch whether or not it has been merge
 $ git push origin --delete <branch> # Delete a remote branch
 $ git branch -m <new name>      # Rename current branch
 $ git push origin -u <new name> # Reset upstream branch
+$ git switch <branch>           # Checkout branch, fetch from remote if needed
+$ git switch -c <branch>        # Create a new branch and check it out
+```
+
+## Tagging
+```console
+$ git tag                       # Show current tags
+$ git tag <tagname>             # Create a new tag
+$ git tag <tagname> -a          # Create a new tag with description
+$ git push origin <tag>         # Push individual tag to remote
+$ git push origin --tags        # Push all tags to remote
 ```
 
 ## Stashing
@@ -70,6 +80,9 @@ $ git push -f origin <branch>   # After local reset, also delete the commits (s)
 $ git checkout <commit> -- file1/to/restore file2/to/restore # Restore files to the given revision
 $ git checkout <commit> .       # Open a previous commit (don't forget the .)
 $ git rebase -i HEAD~n          # Interactively make changes on the last n commits
+$ git restore --staged <file>   # Undo staging
+$ git clean -n                  # Check which untracked files would be removed
+$ git clean -f                  # Remove untracked files
 ```
 
 ## Config
@@ -106,5 +119,7 @@ $ git diff HEAD...origin/master                     # Show a single diff after g
 $ git remote -v                                     # Show the protocol and location of the remote repositories
 $ git remote show origin                            # Show info about remote repository
 $ git remote set-url origin ssh://git@github.com/<user>/<repo> # Change the protocol to ssh
+$ git log --pretty=format: --name-only --diff-filter=A | sort -u # Show all files that ever existed in the current branch
+$ git log --all --pretty=format: --name-only --diff-filter=A | sort - # Same as above, but in the entire repo
 $ ssh-keygen -t ed25519 -C "<email>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair for usage with git via ssh
 ```
