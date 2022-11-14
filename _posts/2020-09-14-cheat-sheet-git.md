@@ -43,6 +43,7 @@ $ git checkout -b <branch> <commit-hash> # Create new branch from a previous com
 $ git checkout --track origin/<branch> # Fetch, track and checkout a branch from origin
 $ git branch -d <branch>        # Delete branch, but check that it has been merged
 $ git branch -D <branch>        # Delete branch whether or not it has been merged
+$ git checkout --orphan <branch> # Create orphan (empty) branch
 $ git push origin --delete <branch> # Delete a remote branch
 $ git branch -m <new name>      # Rename current branch
 $ git push origin -u <new name> # Reset upstream branch
