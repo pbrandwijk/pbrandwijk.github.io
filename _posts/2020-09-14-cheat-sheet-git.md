@@ -25,6 +25,7 @@ $ git fetch                     # Get the new commits, but do not apply them yet
 $ git reset --hard HEAD         # Go back to the HEAD revision (undo all changes to versioned files)
 $ git push origin +HEAD         # Push the new HEAD to the remote branch (after resetting)
 $ git remote prune origin       # Delete all local branches that are not on origin
+$ git log origin/master..HEAD   # See commits on local branch that have not yet been pushed to remote branch
 ```
 
 ## Check merge
