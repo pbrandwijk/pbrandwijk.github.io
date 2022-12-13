@@ -36,7 +36,7 @@ $ cd /dev/shm
 $ echo "Any kind of data" > file
 ```
 
-Networking
+## Networking
 ```console
 $ curl ifconfig.me              # Show your public IP address
 $ nmap -sP 192.168.1.1/24       # Show the IPs of all devices connected to the router (192.168.1.1/24 is the gateway/mask)
@@ -49,7 +49,7 @@ $ rfkill list                   # List all wireless devices (incl Bluetooth)
 $ hcitool dev                   # List all local Bluetooth devices and their address
 ```
 
-Services and processes
+## Services and processes
 ```console
 $ service --status-all          # Show the status of all known services
 $ systemctl status mpd          # Show the status of a specific service
@@ -66,7 +66,7 @@ $ ps -o pid,user,%mem,command ax | sort -b -k3 -r  # Memory usage for each proce
 $ sudo pmap <PID>               # Memory usage per loaded library
 ```
 
-Monitoring
+## Monitoring
 ```console
 $ upower -e                     # List all power devices
 $ upower -d                     # Show all power information
@@ -79,14 +79,14 @@ $ aplay -l                      # List audio devices
 $ lsmod                         # Show loaded kernel modules
 ```
 
-Messaging
+## Messaging
 ```console
 $ notify-send -i face-wink Hello
 $ zenity --title "Attention" --warning --text "Check your mail... \n\n\nSYS"
 $ xmessage  "Are you sure you want to shutdown? " -buttons yes,no
 ```
 
-Misc
+## Misc
 ```console
 $ uname -a                      # Show full distro info
 $ cat /etc/anacrontab           # View anacron jobs
@@ -107,14 +107,14 @@ $ stty rows 50 cols 90          # Manually set the max rows and cols for the ter
 $ date +"So this is week: %U"   # Show the current week number
 ```
 
-Java
+## Java
 ```console
 $ jps -l                        # Show running Java processes and their main class
 $ javap <class file>            # Disassemble a Java class file 
 $ /usr/lib/jvm/default-java/bin/keytool -list  $ List the keys the default keystore of the given JVM
 ```
 
-SSL
+## SSL
 ```console
 $ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 # Create a new key and certificate
 $ openssl x509 -noout -text -in cert.pem # Get info on the given certificate
@@ -122,7 +122,7 @@ $ echo | openssl s_client -connect pbrandwijk.com:443 | openssl x509 -noout -tex
 $ ssh-keygen -t ed25519 -C "<user email address>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair in .ssh
 ```
 
-Zip
+## Zip
 ```console
 $ zip -e archive.zip <file1> <file2> # Add given files or folders to a zip file and prompt user for a password (insecure)
 $ 7z a -tzip -mem=AES256 -p archive.zip <file1> <file2>  # Create an encrypted zip file with AES-256 encryption
