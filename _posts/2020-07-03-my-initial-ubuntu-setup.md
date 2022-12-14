@@ -166,6 +166,13 @@ $ sudo apt install haskell-platform
 ```
 For a more scalable solution, have a look at [stack][stack], or the newer [ghcup][ghcup].
 
+## Python
+```console
+$ sudo apt install python3-pip   # Python package manager
+$ sudo apt install python3-venv  # Virtual environment manager
+```
+See the article on [linuxize][linuxize] on how to use the virtual environment for Python.
+
 ## Flatpak
 Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
 ```console
@@ -233,3 +240,4 @@ $ rm -rf ~/.local/share/tracker
 
 [stack]: https://docs.haskellstack.org/en/stable/README/
 [ghcup]: https://www.haskell.org/ghcup/
+[linuxize]: https://linuxize.com/post/how-to-create-python-virtual-environments-on-ubuntu-18-04/
