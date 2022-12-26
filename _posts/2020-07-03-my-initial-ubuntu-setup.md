@@ -71,7 +71,8 @@ $ sudo apt install git \
                    diffstat \
                    guvcview \
                    peek \
-                   filezilla
+                   filezilla \
+                   xdotool
 ```
 
 If you want to allow ssh connections, also install openssh-server:
@@ -172,6 +173,12 @@ $ sudo apt install python3-pip   # Python package manager
 $ sudo apt install python3-venv  # Virtual environment manager
 ```
 See the article on [linuxize][linuxize] on how to use the virtual environment for Python.
+
+## Keyboard shortcuts
+In the Settings menu under Keyboard, go to Keyboard Shortcuts -> View and Customize Shortcuts -> Custom Shortcuts. Add a new one with for example the following command:
+```
+bash -c ' sleep 0.5; xdotool getactivewindow type "<some phrase>"'
+```
 
 ## Flatpak
 Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
