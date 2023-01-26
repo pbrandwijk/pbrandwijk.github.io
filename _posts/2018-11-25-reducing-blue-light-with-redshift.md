@@ -39,4 +39,4 @@ $ redshift -h
 - [GPS coordinates][coordinates]
 
 [redshift]: http://jonls.dk/redshift/
-[coordinates]: https://www.gps-coordinates.net/
+[coordinates]: https://gps-coordinates.org/
