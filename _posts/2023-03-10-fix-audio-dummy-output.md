@@ -15,9 +15,13 @@ I had this on Ubuntu 22.04, with pulseaudio. The on board speakers and mic did n
 ## Solution
 Stop pulseaudio with `pulseaudio -k`.
 
-Add the following line to end of the file `/etc/modprobe.d/alsa-base.conf`:
+Add the following line th. end of the file `/etc/modprobe.d/alsa-base.conf`:
 ```
 options snd_hda_intel dmic_detect=0
+```
+Via terminal:
+```console
+echo "options snd_hda_intel dmic_detect=0" | sudo tee -a /etc/modprobe.d/alsa-base.conf
 ```
 
 Restart the system.
