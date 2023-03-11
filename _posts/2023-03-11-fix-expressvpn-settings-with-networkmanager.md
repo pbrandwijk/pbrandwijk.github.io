@@ -11,7 +11,7 @@ tags:
 *Fix for an issue I had on my fresh Ubuntu 22.10 installation where the VPN set up did not work.*
 
 ## Situation
-In my post {% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %} I explain how to set up your VPN with `nmcli` using a `ovpn` file. After I upgraded to Ubuntu 22.10, this approach did not seem to work anymore. I could set up the VPN connection, but as soon I attempt to connect, the connection would fail with an unspecified error.
+In [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}) I explain how to set up your VPN with `nmcli` using a `ovpn` file. After I upgraded to Ubuntu 22.10, this approach did not seem to work anymore. I could set up the VPN connection, but as soon I attempt to connect, the connection would fail with an unspecified error.
 
 ## Solution
 First attempt was to re-read the instructions given by ExpressVPN for manual setup on Ubuntu. Turns out that after importing the `ovpn` file, there are still some adjustments to make, like setting the Gateway port and the Data compression. Also I had to change the TLS mode to TLS-Auth and set the key file to a file provided by ExpressVPN. After following these instructions it still did not work and it still did not provide any useful error.

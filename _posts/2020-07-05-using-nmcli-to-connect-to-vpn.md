@@ -47,6 +47,8 @@ $ nmcli con down id VPNID            # Deactivate the VPN
 $ nmcli c show --active | grep vpn   # See if any VPN connections are active
 ```
 
+See [this post]({% post_url 2023-03-11-fix-expressvpn-settings-with-networkmanager %}) for an update on setting up the VPN on Ubuntu 22.10.
+
 
 ## Resources
 - [How to save vpn passwords with networkmanger][askubuntu1]

@@ -205,7 +205,7 @@ For IntelliJ, you may need to add a permission to access the JDK on your system.
 All user cache files of installed apps are stored in `~/.var/app`. Flatpak itself and the apps are installed in `/var/lib/flatpak` and the user config is installed in `~/.local/share/flatpak`.
 
 ## VPN
-Download the `.ovpn` files from your VPN provider for the connections that you want to add. Import them and set up the user name and password as described in [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}).
+Download the `.ovpn` files from your VPN provider for the connections that you want to add. Import them and set up the user name and password as described in [this post]({% post_url 2020-07-05-using-nmcli-to-connect-to-vpn %}) and updated in [this post]({% post_url 2023-03-11-fix-expressvpn-settings-with-networkmanager %}).
 
 Then add the automatic activation of a VPN connection at the start of a user session to `~/.profile`:
 ```shell
