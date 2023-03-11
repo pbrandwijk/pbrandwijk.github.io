@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    Cheat sheet tmux for Dvorak
+title:    Cheat sheet tmux
 date:     2023-02-13 22:00:00 +0200
 tags:     
  - linux
