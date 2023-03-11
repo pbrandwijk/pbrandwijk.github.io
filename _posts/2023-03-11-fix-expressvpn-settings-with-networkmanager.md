@@ -30,7 +30,7 @@ keysize 256
 ```
 There are no longer any cyphers that use this property, so it has been removed. You can either remove it directly in the config file, remove it from the `ovpn` file before importing, or open the GUI of NetworkManager (Settings -> Network) and uncheck the setting under Identity -> Advanced.
 
-
+After this change I was able to connect to the VPN. The keysize property did not cause issues on my Ubuntu 22.04 installation, because that uses OpenVPN 2.5.5 where this property still exists. What I do not understand is why the VPN worked perfectly on 22.04 without the additional settings as provided by ExpressVPN.
 
 ## Resources
 - [OpenVPN giving an error][superuser]
