@@ -72,7 +72,8 @@ $ sudo apt install git \
                    guvcview \
                    peek \
                    filezilla \
-                   xdotool
+                   xdotool \
+                   xclip
 ```
 
 If you want to allow ssh connections, also install openssh-server:
