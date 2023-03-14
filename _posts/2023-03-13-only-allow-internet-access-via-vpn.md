@@ -40,7 +40,7 @@ $ sudo ufw default deny outgoing
 $ sudo ufw default deny incoming
 ```
 
-Then allow the outgoing traffic only on the VPN connection.
+Then allow the outgoing traffic only on the VPN network interface.
 ```console
 $ sudo ufw allow out on tun0 from any to any
 ```
