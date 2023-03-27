@@ -168,6 +168,12 @@ $ sudo apt install haskell-platform
 ```
 For a more scalable solution, have a look at [stack][stack], or the newer [ghcup][ghcup].
 
+## Node.js
+```console
+$ sudo apt install nodejs
+$ sudo apt install npm
+```
+
 ## Python
 ```console
 $ sudo apt install python3-pip   # Python package manager
