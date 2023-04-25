@@ -188,9 +188,9 @@ bash -c ' sleep 0.5; xdotool getactivewindow type "<some phrase>"'
 ```
 
 ## Flatpak
-Flatpak allows you to install more recent versions of software and more control over the permissions of the software. Here I use it to install GIMP.
+Flatpak allows you to install more recent versions of software and more control over the permissions of the software.
 ```console
-$ sudo apt install flatpak
+$ sudo apt install flatpak gnome-software-plugin-flatpak
 $ flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 $ flatpak update
 $ flatpak install flathub org.gimp.GIMP
