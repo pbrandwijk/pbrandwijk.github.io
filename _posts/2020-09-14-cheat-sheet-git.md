@@ -124,4 +124,5 @@ $ git remote set-url origin ssh://git@github.com/<user>/<repo> # Change the prot
 $ git log --pretty=format: --name-only --diff-filter=A | sort -u # Show all files that ever existed in the current branch
 $ git log --all --pretty=format: --name-only --diff-filter=A | sort - # Same as above, but in the entire repo
 $ ssh-keygen -t ed25519 -C "<email>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair for usage with git via ssh
+$ git clean -fdx                                    # Remove all untracked files
 ```
