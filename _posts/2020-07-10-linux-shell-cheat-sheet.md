@@ -64,6 +64,7 @@ $ ps -e
 $ ps -eF
 $ ps -o pid,user,%mem,command ax | sort -b -k3 -r  # Memory usage for each process
 $ sudo pmap <PID>               # Memory usage per loaded library
+$ sudoedit <text file>          # Use the system editor to edit a file, but keep the user's environment settings (e.g. .vimrc config)
 ```
 
 ## Monitoring
