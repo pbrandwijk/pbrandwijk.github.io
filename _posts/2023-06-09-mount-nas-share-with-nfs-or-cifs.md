@@ -31,6 +31,7 @@ Create the folder that the share should be mounted to and make sure it is owned 
 ```console
 $ mkdir /mnt/nfsshare
 ```
+If you add the mount directory under `/media`, it will automatically show up in the file explorer.
 
 #### Manually mount the network share
 Check that everything works by creating the mount manually:
@@ -46,6 +47,7 @@ $ sudoedit /etc/fstab
 ```
 <host ip>:/nfs/share            /mnt/nfsshare  nfs   rw,hard,intr,noexec,nosuid,rsize=8192,wsize=8192,timeo=14      0       0
 ```
+Keep in mind that in Ubuntu, the `udp` network protocol is not supported for `nfs`. It will always use `tcp`.
 
 
 ## CIFS
