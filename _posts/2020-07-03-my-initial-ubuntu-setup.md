@@ -76,6 +76,11 @@ $ sudo apt install git \
                    xclip
 ```
 
+Text expander via `snap`:
+```console
+$ sudo snap install espanso --classic --channel=latest/edge
+```
+
 If you want to allow ssh connections, also install openssh-server:
 ```console
 $ sudo apt install openssh-server
@@ -85,6 +90,24 @@ $ systemctl restart sshd
 
 ## Dotfiles
 I keep as many as possible configuration (dot) files in a separate folder managed with git version control. This is tidier and allows easy portability. For this to work you do need to reference these files in the location that is expected by the respective program.
+
+```console
+$ git clone https://github.com/pbrandwijk/dotfiles.git
+```
+Or first install the GitHub SSH key in your keyring:
+```console
+$ scp -r <user>@<ip>:/home/<user>/.ssh/github_id_ed25519 ~/.ssh/
+$ ssh-add ~/.ssh/github_id_ed25519
+```
+And then clone using the key:
+```console
+$ git clone git@github.com:pbrandwijk/dotfiles.git
+```
+After this, run the script to create the symlinks:
+```console
+$ cd dotfiles
+$ ./create_symlinks.sh
+```
 
 ## Oh my Zsh
 This makes the shell look a lot better. Make sure you have `curl`, `zsh` and `git` installed first. If you already have a `.zshrc` file, it will be backed up and then overwritten.
