@@ -111,7 +111,7 @@ $ git --no-pager log --diff-filter=D -- **/<file>   # Find commit in which file 
 
 ## Other
 ```console
-$ git status                                        # Get status info of the repo
+$ git status -uall                                  # Get repo info, files in new dirs are mentioned explicitly
 $ git log --oneline <file>                          # List the history in oneliners
 $ git grep <expression> $(git rev-list --all)       # Search for file content in the entire repo history
 $ git rev-list --all | xargs git grep <expression>  # Like above, but for larger repos
