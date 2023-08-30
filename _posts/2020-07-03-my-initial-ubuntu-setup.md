@@ -20,7 +20,19 @@ $ sudo ufw allow ssh/tcp    # Allow connections over ssh
 $ sudo ufw logging on       # Enable logging
 $ sudo ufw enable           # Turn on ufw
 $ sudo ufw status           # Print the status and active rules
+$ sudo ufw allow 60000:61000/udp # Open ports used by Mosh
 ```
+
+If you want to be more restrictive for accepting mosh connections, you can do something like this:
+```console
+$ ip -c a                   # Check the id of your LAN network interface
+$ sudo ufw allow in on eth0 proto udp from 192.168.1.0/24 to any port 60001
+```
+Keep in mind when using Mosh from the client to specify the port:
+```console
+$ mosh user@machine -p 60001
+```
+
 
 # Language support
 I usually install the distro with English as base language, and then add the additional languages I need.
@@ -73,7 +85,9 @@ $ sudo apt install git \
                    peek \
                    filezilla \
                    xdotool \
-                   xclip
+                   xclip \
+                   ipcalc \
+                   mosh
 ```
 
 Text expander via `snap`:
