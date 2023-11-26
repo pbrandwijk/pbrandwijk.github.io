@@ -87,7 +87,8 @@ $ sudo apt install git \
                    xdotool \
                    xclip \
                    ipcalc \
-                   mosh
+                   mosh \
+                   openssh-server
 ```
 
 Text expander via `snap`:
