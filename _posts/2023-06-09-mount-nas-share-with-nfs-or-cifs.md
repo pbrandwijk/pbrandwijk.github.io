@@ -27,11 +27,12 @@ $ sudo apt install nfs-common
 ```
 
 #### Create the folder for the mount
-Create the folder that the share should be mounted to and make sure it is owned by yourself and not root:
+Create the folder that the share should be mounted to (here we use `nfsshare`) and make sure it is owned by yourself and not root:
 ```console
-$ mkdir /mnt/nfsshare
+$ sudo mkdir /mnt/nfsshare
+$ sudo chown <user>: /mnt/nfsshare
 ```
-If you add the mount directory under `/media`, it will automatically show up in the file explorer.
+If you add the mount directory as `/media/<user>/nfsshare`, it will automatically show up in the file explorer.
 
 #### Manually mount the network share
 Check that everything works by creating the mount manually:
