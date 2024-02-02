@@ -88,7 +88,9 @@ $ sudo apt install git \
                    xclip \
                    ipcalc \
                    mosh \
-                   openssh-server
+                   openssh-server \
+                   ripgrep \
+                   fd-find
 ```
 
 Text expander via `snap`:
