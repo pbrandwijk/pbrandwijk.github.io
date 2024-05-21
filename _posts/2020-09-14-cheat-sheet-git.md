@@ -125,4 +125,5 @@ $ git log --pretty=format: --name-only --diff-filter=A | sort -u # Show all file
 $ git log --all --pretty=format: --name-only --diff-filter=A | sort - # Same as above, but in the entire repo
 $ ssh-keygen -t ed25519 -C "<email>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair for usage with git via ssh
 $ git clean -fdx                                    # Remove all untracked files
+$ git grep "<string or regexp>" $(git rev-list --all) # Text search through all local branches of the repository
 ```
