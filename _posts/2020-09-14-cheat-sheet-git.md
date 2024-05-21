@@ -113,8 +113,8 @@ $ git --no-pager log --diff-filter=D -- **/<file>   # Find commit in which file 
 ```console
 $ git status -uall                                  # Get repo info, files in new dirs are mentioned explicitly
 $ git log --oneline <file>                          # List the history in oneliners
-$ git grep <expression> $(git rev-list --all)       # Search for file content in the entire repo history
-$ git rev-list --all | xargs git grep <expression>  # Like above, but for larger repos
+$ git grep "<string or regex>" $(git rev-list --all) # Search for file content in the entire local repo history
+$ git rev-list --all | xargs git grep "<string or regex>"  # Like above, but for larger repos
 $ git rev-list --all | xargs -I '{}' git ls-tree --full-tree -r '{}' | grep '.*<file name>*' # Check if the given file name ever existed in the repository
 $ git log -p HEAD..origin/master                    # Show list of differences after a git fetch
 $ git diff HEAD...origin/master                     # Show a single diff after git fetch
@@ -125,5 +125,4 @@ $ git log --pretty=format: --name-only --diff-filter=A | sort -u # Show all file
 $ git log --all --pretty=format: --name-only --diff-filter=A | sort - # Same as above, but in the entire repo
 $ ssh-keygen -t ed25519 -C "<email>" -f ~/.ssh/git_id_ed25519 # Generate an ssh keypair for usage with git via ssh
 $ git clean -fdx                                    # Remove all untracked files
-$ git grep "<string or regexp>" $(git rev-list --all) # Text search through all local branches of the repository
 ```
