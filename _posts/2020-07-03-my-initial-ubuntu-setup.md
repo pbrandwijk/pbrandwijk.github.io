@@ -198,7 +198,7 @@ $ sudo snap install intellij-idea-ultimate --classic
 ## Latex
 My favorite desktop publishing program.
 ```console
-$ sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+$ sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-humanities
 ```
 
 ## Haskell
