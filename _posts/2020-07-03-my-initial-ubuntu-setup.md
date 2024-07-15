@@ -126,6 +126,46 @@ $ cd dotfiles
 $ ./create_symlinks.sh
 ```
 
+## Neovim / LazyVim
+Install the Kitty terminal:
+```console
+$ sudo apt install kitty
+```
+
+Install a theme for Kitty:
+```console
+THEME=https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/Brogrammer.conf
+wget "$THEME" -P ~/.config/kitty/kitty-themes/themes
+cd ~/.config/kitty
+ln -s ./kitty-themes/themes/Brogrammer.conf ~/.config/kitty/theme.conf
+echo "include ./theme.conf" > kitty.conf 
+```
+
+Install `lazygit`:
+```console
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+rm lazygit lazygit.tar.gz
+```
+
+Install a [Nerd Font](https://www.nerdfonts.com/) like Victor Mono. Unzip the fonts and copy them to `~/.fonts/truetype`. Run `kitty +list-fonts` to check supported fonts.
+
+Install `neovim`, `ripgrep` and `fd`:
+```console
+$ sudo snap install --beta nvim --classic  # Gives a more recent version than apt
+$ sudo apt install ripgrep fd-find
+```
+
+Remove or backup any existing config for Neovim:
+```console
+$ rm -rf ~/.config/nvim
+$ rm -rf ~/.local/share/nvim
+$ rm -rf ~/.local/state/nvim
+$ rm -rf ~/.cache/nvim
+```
+
 ## Oh my Zsh
 This makes the shell look a lot better. Make sure you have `curl`, `zsh` and `git` installed first. If you already have a `.zshrc` file, it will be backed up and then overwritten.
 ```console
