@@ -22,10 +22,8 @@
 title: "Pieter Brandwijk - Software Quality Consultant"
 first_name: Pieter
 last_name: Brandwijk
-email: pieter@pbrandwijk.com
 pgp_fingerprint: "B8 7C 2D 27 91 28 11 DE FF 53 D7 3A 4C B4 07 5B 9F AD 44 A8"
 sip: p.brandwijk@sip.linphone.org
-tel: "+34 693 720 739"
 profession: "Software Engineer"
 description: > # this means to ignore newlines until "baseurl:"
   Personal blog of Pieter Brandwijk.
