@@ -45,7 +45,7 @@ For the below configuration to work, you need xbacklight installed and working. 
 
 Add the backlight controls to your i3 config file:
 ```
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 ```
@@ -71,7 +71,7 @@ Use this command to get an overview of to which respective XF86 keyboard symbol 
 $ xmodmap -pke
 ```
 
-### Analysing input events
+### Analyzing input events
 All events (including mouse):
 ```console
 $ xev

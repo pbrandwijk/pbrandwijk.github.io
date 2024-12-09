@@ -16,7 +16,7 @@ $ echo This is sensitive data > data.txt
 $ shred -u data.txt
 ```
 
-Optionally, put the following in `~/.bash_aliases`. The added options assure that the file is overwitten 10 times with random data and with zeros the last time.
+Optionally, put the following in `~/.bash_aliases`. The added options assure that the file is overwritten 10 times with random data and with zeros the last time.
 ```
 # Shorthand for securely shredding files and deleting them
 alias shred='shred -uz --iterations=10'

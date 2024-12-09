@@ -12,7 +12,7 @@ I'm using Ubuntu 18.04 as my OS.
 
 ## Getting a random number from the command line
 The `/dev/random` file generates random output for everything you read from it.
-In the followig example I use `head` to read six characters from it and pass the output
+In the following example I use `head` to read six characters from it and pass the output
 to `base64`, which turns it into more readable text:
 
 ```console

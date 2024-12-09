@@ -300,7 +300,7 @@ Then add the automatic activation of a VPN connection at the start of a user ses
 if [[ $(nmcli c show --active | grep vpn) ]]; then
   echo "VPN already active"
 else
-  # Check if any VPN configutation exists
+  # Check if any VPN configuration exists
   if [[ $(nmcli c show | grep vpn) ]]; then
     # Connect to the first one on the list
     nmcli con up id $(nmcli c show | grep vpn | awk '{ print $1 }' | head -n 1) passwd-file ~/.vpncreds
